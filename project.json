@@ -6,6 +6,7 @@
   "dependencies": {
     "Cloning_MasterTaxClient": "[1.0.26]",
     "ExceptionClassifier": "[1.0.8]",
+    "Fileroom_Login": "[1.0.5]",
     "PingID": "[1.0.12]",
     "Review_Wizards": "[1.1.6]",
     "Sanity_Drag.and.Drop_Thumbnail_Library": "[1.0.3]",
@@ -14,6 +15,7 @@
     "Sanity_ReviewTreeValidation": "[1.0.7]",
     "Sanity_SCD_ReviewQueue": "[1.0.14]",
     "Sanity_SubmissionWizard": "[1.0.15]",
+    "Sanity_Taxcaddy_IndexTree_Validation": "[1.0.3]",
     "Sanity_ThumbnailPageAssociation": "[1.0.20]",
     "SanityReport_GenerateOutput": "[1.0.4]",
     "SanityReport_ReadTemplate": "[1.0.7]",
