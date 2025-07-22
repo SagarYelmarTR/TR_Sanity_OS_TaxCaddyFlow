@@ -1,5 +1,5 @@
 {
-  "name": "Fileroom_SanityTest",
+  "name": "TaxCaddy_SanityTest_DD2024",
   "projectId": "432d591a-c7ee-460a-90c6-1cbd080a1716",
   "description": "The aim of this project is to automate the sanity testing process for the FileRoom system, ensuring that all critical functionalities are working correctly. This will enhance efficiency, reduce manual effort, and ensure consistent validation of the system's performance.",
   "main": "Main.xaml",
