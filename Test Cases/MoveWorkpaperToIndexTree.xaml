@@ -8,7 +8,7 @@
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1408.8,4920.8</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1112.8,4920.8</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>MoveWorkpaperToIndexTree_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -143,11 +143,7 @@
       <Variable x:TypeArguments="x:String" Name="strSPBinderPath" />
       <Variable x:TypeArguments="x:String" Name="strFormName" />
       <Variable x:TypeArguments="x:String" Name="strSubFormName" />
-      <Variable x:TypeArguments="x:String" Name="strEntityName">
-        <Variable.Default>
-          <Literal x:TypeArguments="x:String">Dovenmuehle Mortgage, Inc.,*</Literal>
-        </Variable.Default>
-      </Variable>
+      <Variable x:TypeArguments="x:String" Default="Dovenmuehle Mortgage, Inc.,*" Name="strEntityName" />
       <Variable x:TypeArguments="x:String" Name="strFolderName" />
       <Variable x:TypeArguments="x:Int32" Name="intRetryCount" />
       <Variable x:TypeArguments="x:String" Default="SPBinder_InputForms" Name="strSubComponent" />
@@ -441,7 +437,7 @@
                         <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="406.4,176" sap2010:WorkflowViewState.IdRef="LogMessage_14" Message="[&quot;Clicked on the 'Move To' option.&quot;]" />
                         <uix:NCheck Action="Check" DisplayName="Check/Uncheck - RENTAL (T)" sap:VirtualizedContainerService.HintSize="406.4,189.6" sap2010:WorkflowViewState.IdRef="NCheck_3" ScopeIdentifier="395e938c-d274-481a-a736-d219bc572e3a" Version="V3">
                           <uix:NCheck.Target>
-                            <uix:TargetAnchorable CVScreenId="2bdee867-d5fe-4b29-9a84-95a45152ab60" DesignTimeRectangle="61, 155, 550, 27" DesignTimeScaleFactor="1.25" ElementType="CheckBox" FullSelectorArgument="&lt;ctrl name='Income' role='outline item' /&gt;&lt;ctrl name='RENTAL' role='outline item' /&gt;" Guid="4d64123f-8e13-4251-bd0b-6b4c637c9682" ImageBase64="" InformativeScreenshot="77fc9333e4d4106abc729540fa56ea7c.png" ScopeSelectorArgument="&lt;wnd app='spbinder.exe' cls='HwndWrapper*' title='Move Forms' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
+                            <uix:TargetAnchorable CVScreenId="2bdee867-d5fe-4b29-9a84-95a45152ab60" DesignTimeRectangle="61, 155, 550, 27" DesignTimeScaleFactor="1.25" ElementType="CheckBox" FullSelectorArgument="&lt;ctrl name='Income' role='outline item' /&gt;&lt;ctrl name='RENTAL' role='outline item' /&gt;" Guid="4d64123f-8e13-4251-bd0b-6b4c637c9682" ImageBase64="" InformativeScreenshot="1115378fba43537399a289ab6b7d8b44.png" ScopeSelectorArgument="&lt;wnd app='spbinder.exe' cls='HwndWrapper*' title='Move Forms' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
                           </uix:NCheck.Target>
                         </uix:NCheck>
                         <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="406.4,176" sap2010:WorkflowViewState.IdRef="LogMessage_15" Message="[&quot;Selected the RENTEL workpaper where the page should be associated.&quot;]" />
