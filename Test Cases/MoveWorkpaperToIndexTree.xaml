@@ -8,7 +8,7 @@
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1112.8,4920.8</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1408.8,5325.6</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>MoveWorkpaperToIndexTree_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -65,6 +65,8 @@
       <x:String>TestSummary_Filtering</x:String>
       <x:String>GlobalVariablesNamespace</x:String>
       <x:String>GlobalConstantsNamespace</x:String>
+      <x:String>UiPath.UIAutomationNext.Models</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities.Services.RuntimeAnalyze</x:String>
     </sco:Collection>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
@@ -138,7 +140,7 @@
       <AssemblyReference>TestSummary_Filtering</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="MoveWorkpaperToIndexTree" sap:VirtualizedContainerService.HintSize="804.8,4856" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="MoveWorkpaperToIndexTree" sap:VirtualizedContainerService.HintSize="806.4,5260.8" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="strSPBinderPath" />
       <Variable x:TypeArguments="x:String" Name="strFormName" />
@@ -154,20 +156,20 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <TryCatch sap2010:Annotation.AnnotationText="Move Workpaper to Associate with Index Tree&#xA;Steps:&#xA;1.Navigate to the &quot;Input Form&quot; section.&#xA;2.Locate &quot;Unassociated Nodes.&quot;&#xA;3.Select an unassociated page from the list.&#xA;4.Click on the &quot;Move to Workpaper&quot; option.&#xA;5.Select the appropriate workpaper or index tree location where the page should be associated.&#xA;6.Confirm the move operation.&#xA;7.Verify that the workpaper is now associated with the Index Tree." DisplayName="Try Catch - Test Case: Move Workpaper to Associate with Index Tree" sap:VirtualizedContainerService.HintSize="742.4,4767.2" sap2010:WorkflowViewState.IdRef="TryCatch_4">
+    <TryCatch sap2010:Annotation.AnnotationText="Move Workpaper to Associate with Index Tree&#xA;Steps:&#xA;1.Navigate to the &quot;Input Form&quot; section.&#xA;2.Locate &quot;Unassociated Nodes.&quot;&#xA;3.Select an unassociated page from the list.&#xA;4.Click on the &quot;Move to Workpaper&quot; option.&#xA;5.Select the appropriate workpaper or index tree location where the page should be associated.&#xA;6.Confirm the move operation.&#xA;7.Verify that the workpaper is now associated with the Index Tree." DisplayName="Try Catch - Test Case: Move Workpaper to Associate with Index Tree" sap:VirtualizedContainerService.HintSize="744,5172" sap2010:WorkflowViewState.IdRef="TryCatch_4">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
       <TryCatch.Try>
-        <Sequence DisplayName="Try" sap:VirtualizedContainerService.HintSize="705.6,4360" sap2010:WorkflowViewState.IdRef="Sequence_2">
+        <Sequence DisplayName="Try" sap:VirtualizedContainerService.HintSize="707.2,4764.8" sap2010:WorkflowViewState.IdRef="Sequence_2">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <ui:MultipleAssign DisplayName="Multiple Assign - Variable declaration" sap:VirtualizedContainerService.HintSize="643.2,304.8" sap2010:WorkflowViewState.IdRef="MultipleAssign_1">
+          <ui:MultipleAssign DisplayName="Multiple Assign - Variable declaration" sap:VirtualizedContainerService.HintSize="644.8,304.8" sap2010:WorkflowViewState.IdRef="MultipleAssign_1">
             <ui:MultipleAssign.AssignOperations>
               <scg:List x:TypeArguments="ui:AssignOperation" Capacity="8">
                 <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_9">
@@ -227,19 +229,19 @@
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
           </ui:MultipleAssign>
-          <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Application: SPbinder" sap:VirtualizedContainerService.HintSize="643.2,3966.4" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" OpenMode="Never" ScopeGuid="395e938c-d274-481a-a736-d219bc572e3a" Version="V2" WindowResize="Maximize">
+          <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Application: SPbinder" sap:VirtualizedContainerService.HintSize="644.8,4371.2" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" OpenMode="Never" ScopeGuid="395e938c-d274-481a-a736-d219bc572e3a" Version="V2" WindowResize="Maximize">
             <uix:NApplicationCard.Body>
               <ActivityAction x:TypeArguments="x:Object">
                 <ActivityAction.Argument>
                   <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
                 </ActivityAction.Argument>
-                <Sequence DisplayName="Use Application: Body" sap:VirtualizedContainerService.HintSize="609.6,3652" sap2010:WorkflowViewState.IdRef="Sequence_10">
+                <Sequence DisplayName="Use Application: Body" sap:VirtualizedContainerService.HintSize="611.2,4056.8" sap2010:WorkflowViewState.IdRef="Sequence_10">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <TryCatch DisplayName="Try Catch - Form Navigation" sap:VirtualizedContainerService.HintSize="547.2,323.2" sap2010:WorkflowViewState.IdRef="TryCatch_5">
+                  <TryCatch DisplayName="Try Catch - Form Navigation" sap:VirtualizedContainerService.HintSize="548.8,323.2" sap2010:WorkflowViewState.IdRef="TryCatch_5">
                     <TryCatch.Try>
                       <Sequence DisplayName="Form Navigation" sap:VirtualizedContainerService.HintSize="416,24.8" sap2010:WorkflowViewState.IdRef="Sequence_40">
                         <sap:WorkflowViewStateService.ViewState>
@@ -383,7 +385,7 @@
                       </Sequence>
                     </TryCatch.Finally>
                   </TryCatch>
-                  <TryCatch sap2010:Annotation.AnnotationText="Move a workpaper from 'Unassociated Nodes' to the 'Rental Node'" DisplayName="Try Catch - TC_02" sap:VirtualizedContainerService.HintSize="547.2,2567.2" sap2010:WorkflowViewState.IdRef="TryCatch_3">
+                  <TryCatch sap2010:Annotation.AnnotationText="Move a workpaper from 'Unassociated Nodes' to the 'Rental Node'" DisplayName="Try Catch - TC_02" sap:VirtualizedContainerService.HintSize="548.8,2972" sap2010:WorkflowViewState.IdRef="TryCatch_3">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -392,14 +394,14 @@
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
                     <TryCatch.Try>
-                      <Sequence DisplayName="Move a workpaper from 'Unassociated Nodes' to the 'Rental Node'" sap:VirtualizedContainerService.HintSize="468.8,2276" sap2010:WorkflowViewState.IdRef="Sequence_32">
+                      <Sequence DisplayName="Move a workpaper from 'Unassociated Nodes' to the 'Rental Node'" sap:VirtualizedContainerService.HintSize="512,2680.8" sap2010:WorkflowViewState.IdRef="Sequence_32">
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                             <x:Boolean x:Key="IsPinned">False</x:Boolean>
                           </scg:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
-                        <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click - Entity Name" sap:VirtualizedContainerService.HintSize="406.4,225.6" sap2010:WorkflowViewState.IdRef="NClick_15" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="395e938c-d274-481a-a736-d219bc572e3a" Version="V3">
+                        <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click - Entity Name" sap:VirtualizedContainerService.HintSize="449.6,225.6" sap2010:WorkflowViewState.IdRef="NClick_15" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="395e938c-d274-481a-a736-d219bc572e3a" Version="V3">
                           <uix:NClick.Target>
                             <uix:TargetAnchorable CVScreenId="556cdc5b-0646-449c-ac17-223a234f481d" CvTextArea="15, 821, 299, 13" CvType="Text" DesignTimeRectangle="19, 819, 302, 19" DesignTimeScaleFactor="1.25" ElementType="Text" FullSelectorArgument="[string.Format(&quot;&lt;ctrl automationid='FirstExpander' /&gt;&lt;ctrl name='{0}' role='text' /&gt;&quot;, strEntityName)]" Guid="7b2ccab5-b569-4420-9399-982e31df055a" InformativeScreenshot="db7b9d9611171af8143f99b7520f6cad.png" ScopeSelectorArgument="&lt;wnd app='spbinder.exe' cls='HwndWrapper*' omit:title='SPbinder - ANDERSON, JACK (APN_11032025_07) | 1040 | 2023 | Bind*' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Visible" WaitForReadyArgument="Complete" />
                           </uix:NClick.Target>
@@ -414,12 +416,12 @@
                             </uix:VerifyExecutionOptions>
                           </uix:NClick.VerifyOptions>
                         </uix:NClick>
-                        <uix:NGetText DisplayName="Get Text" sap:VirtualizedContainerService.HintSize="406.4,189.6" sap2010:WorkflowViewState.IdRef="NGetText_2" TextString="[strEntityName]" Version="V3">
+                        <uix:NGetText DisplayName="Get Text" sap:VirtualizedContainerService.HintSize="449.6,189.6" sap2010:WorkflowViewState.IdRef="NGetText_2" TextString="[strEntityName]" Version="V3">
                           <uix:NGetText.Target>
                             <uix:TargetAnchorable DesignTimeRectangle="0, 0, 0, 0" FullSelectorArgument="[string.Format(&quot;&lt;ctrl automationid='FirstExpander' /&gt;&lt;ctrl name='{0}' role='text' /&gt;&quot;, strEntityName)]" Guid="92b44acd-bdbe-4ac0-89e1-eea95f933219" ScopeSelectorArgument="&lt;wnd app='spbinder.exe' cls='HwndWrapper*' omit:title='SPbinder - ANDERSON, JACK (APN_11032025_07) | 1040 | 2023 | Bind*' /&gt;" SearchSteps="Selector" Visibility="Visible" WaitForReadyArgument="Complete" />
                           </uix:NGetText.Target>
                         </uix:NGetText>
-                        <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click - Move To" sap:VirtualizedContainerService.HintSize="406.4,225.6" sap2010:WorkflowViewState.IdRef="NClick_16" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="395e938c-d274-481a-a736-d219bc572e3a" Version="V3">
+                        <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click - Move To" sap:VirtualizedContainerService.HintSize="449.6,225.6" sap2010:WorkflowViewState.IdRef="NClick_16" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="395e938c-d274-481a-a736-d219bc572e3a" Version="V3">
                           <uix:NClick.Target>
                             <uix:TargetAnchorable CVScreenId="556cdc5b-0646-449c-ac17-223a234f481d" CvTextArea="146, 861, 59, 13" CvType="Text" DesignTimeRectangle="147, 858, 65, 19" DesignTimeScaleFactor="1.25" ElementType="Text" FullSelectorArgument="&lt;ctrl automationid='FirstExpander' /&gt;&lt;ctrl name='Move To' role='text' /&gt;" Guid="f64cb72f-41b6-4a8d-9616-22d1814d0d16" InformativeScreenshot="e1737c8de31e6aa33d09abd6cef7f0d9.png" ScopeSelectorArgument="&lt;wnd app='spbinder.exe' cls='HwndWrapper*' omit:title='SPbinder - ANDERSON, JACK (APN_11032025_07) | 1040 | 2023 | Bind*' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Visible" WaitForReadyArgument="Complete" />
                           </uix:NClick.Target>
@@ -434,13 +436,38 @@
                             </uix:VerifyExecutionOptions>
                           </uix:NClick.VerifyOptions>
                         </uix:NClick>
-                        <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="406.4,176" sap2010:WorkflowViewState.IdRef="LogMessage_14" Message="[&quot;Clicked on the 'Move To' option.&quot;]" />
-                        <uix:NCheck Action="Check" DisplayName="Check/Uncheck - RENTAL (T)" sap:VirtualizedContainerService.HintSize="406.4,189.6" sap2010:WorkflowViewState.IdRef="NCheck_3" ScopeIdentifier="395e938c-d274-481a-a736-d219bc572e3a" Version="V3">
-                          <uix:NCheck.Target>
-                            <uix:TargetAnchorable CVScreenId="2bdee867-d5fe-4b29-9a84-95a45152ab60" DesignTimeRectangle="61, 155, 550, 27" DesignTimeScaleFactor="1.25" ElementType="CheckBox" FullSelectorArgument="&lt;ctrl name='Income' role='outline item' /&gt;&lt;ctrl name='RENTAL' role='outline item' /&gt;" Guid="4d64123f-8e13-4251-bd0b-6b4c637c9682" ImageBase64="" InformativeScreenshot="1115378fba43537399a289ab6b7d8b44.png" ScopeSelectorArgument="&lt;wnd app='spbinder.exe' cls='HwndWrapper*' title='Move Forms' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
-                          </uix:NCheck.Target>
-                        </uix:NCheck>
-                        <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="406.4,176" sap2010:WorkflowViewState.IdRef="LogMessage_15" Message="[&quot;Selected the RENTEL workpaper where the page should be associated.&quot;]" />
+                        <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="449.6,176" sap2010:WorkflowViewState.IdRef="LogMessage_14" Message="[&quot;Clicked on the 'Move To' option.&quot;]" />
+                        <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Application: Move Forms" sap:VirtualizedContainerService.HintSize="449.6,594.4" sap2010:WorkflowViewState.IdRef="NApplicationCard_2" ScopeGuid="8180b443-3be8-458c-8903-9132d2c92c1b" Version="V2">
+                          <uix:NApplicationCard.Body>
+                            <ActivityAction x:TypeArguments="x:Object">
+                              <ActivityAction.Argument>
+                                <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+                              </ActivityAction.Argument>
+                              <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="416,271.2" sap2010:WorkflowViewState.IdRef="Sequence_43">
+                                <sap:WorkflowViewStateService.ViewState>
+                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                  </scg:Dictionary>
+                                </sap:WorkflowViewStateService.ViewState>
+                                <uix:NCheck Action="Check" DisplayName="Check/Uncheck - RENTAL (T)" sap:VirtualizedContainerService.HintSize="353.6,182.4" sap2010:WorkflowViewState.IdRef="NCheck_3" ScopeIdentifier="8180b443-3be8-458c-8903-9132d2c92c1b" Version="V3">
+                                  <uix:NCheck.Target>
+                                    <uix:TargetAnchorable CVScreenId="a7072852-c7fd-4036-9c17-00f3ebbfdaba" CvElementArea="87, 158, 20, 20" CvTextArea="110, 161, 57, 15" CvTextArgument="RENTAL" CvType="CheckBox" DesignTimeRectangle="89, 159, 77, 19" DesignTimeScaleFactor="1.25" ElementType="CheckBox" FullSelectorArgument="&lt;ctrl name='Income' role='outline item' /&gt;&lt;ctrl name='Rental &amp;amp; Royalty Inc. (Sch. E)' role='outline item' /&gt;&lt;ctrl name='RENTAL' role='outline item' /&gt;&lt;ctrl name='RENTAL' role='check box' text='unchecked' /&gt;" Guid="7fc2ed81-3685-4abd-8602-fe8748d23ae0" ImageBase64="" InformativeScreenshot="29b7e144db40d6d00283ae4ff8928370.png" ScopeSelectorArgument="&lt;wnd app='spbinder.exe' cls='HwndWrapper*' title='Move Forms' /&gt;" SearchSteps="Selector, CV" Version="V4" Visibility="Interactive">
+                                      <uix:TargetAnchorable.Anchors>
+                                        <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                                          <uix:Target CVScreenId="a7072852-c7fd-4036-9c17-00f3ebbfdaba" CvTextArea="63, 133, 197, 18" CvTextArgument="Rental &amp; Royalty Inc. (Sch. E)" CvType="Text" DesignTimeRectangle="65, 132, 195, 19" ElementType="Text" FullSelectorArgument="&lt;ctrl name='Income' role='outline item' /&gt;&lt;ctrl name='Rental &amp;amp; Royalty Inc. (Sch. E)' role='outline item' /&gt;&lt;ctrl name='Rental &amp;amp; Royalty Inc. (Sch. E)' role='text' /&gt;" Guid="0fe951d4-678e-4024-97e5-37c1fc74ad36" SearchSteps="Selector, CV" />
+                                        </scg:List>
+                                      </uix:TargetAnchorable.Anchors>
+                                    </uix:TargetAnchorable>
+                                  </uix:NCheck.Target>
+                                </uix:NCheck>
+                              </Sequence>
+                            </ActivityAction>
+                          </uix:NApplicationCard.Body>
+                          <uix:NApplicationCard.TargetApp>
+                            <uix:TargetApp Area="744, 174, 625, 750" FilePath="C:\SurePrep2009\SPbinder\spbinder.exe" IconBase64="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" InformativeScreenshot="b1307af88b055c23668189b30ae94506.png" Selector="&lt;wnd app='spbinder.exe' cls='HwndWrapper*' title='Move Forms' /&gt;" Title="Move Forms" Version="V1" />
+                          </uix:NApplicationCard.TargetApp>
+                        </uix:NApplicationCard>
+                        <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="449.6,176" sap2010:WorkflowViewState.IdRef="LogMessage_15" Message="[&quot;Selected the RENTEL workpaper where the page should be associated.&quot;]" />
                         <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click - OK" sap:VirtualizedContainerService.HintSize="403.2,225.6" sap2010:WorkflowViewState.IdRef="NClick_17" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="395e938c-d274-481a-a736-d219bc572e3a" Version="V3">
                           <uix:NClick.Target>
                             <uix:TargetAnchorable CVScreenId="2bdee867-d5fe-4b29-9a84-95a45152ab60" CvElementArea="399, 696, 97, 34" CvTextArea="435, 706, 25, 15" CvTextArgument="OK" CvType="Button" DesignTimeRectangle="438, 704, 21, 19" DesignTimeScaleFactor="1.25" ElementType="Text" FullSelectorArgument="&lt;ctrl automationid='btnOk' /&gt;&lt;ctrl name='OK' role='text' /&gt;" FuzzySelectorArgument="&lt;ctrl automationid='btnOk' /&gt;&lt;ctrl name='OK' role='text' automationid='' check:text='OK' /&gt;" Guid="4dd1b690-cdce-4ba5-914d-e5cbff780cd2" InformativeScreenshot="845e1ff965ecc2a69c427545fbe270a4.png" ScopeSelectorArgument="&lt;wnd app='spbinder.exe' cls='HwndWrapper*' title='Move Forms' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
