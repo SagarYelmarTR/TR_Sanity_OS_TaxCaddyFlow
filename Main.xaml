@@ -7,7 +7,7 @@
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1408.8,1128</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1112.8,1128</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>Main2_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -272,9 +272,9 @@
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
           <Transition.To>
-            <State x:Name="__ReferenceID2" sap2010:Annotation.AnnotationText="Process a single transaction. &#xA;The result of the processing can be: 1) Success, 2) Business Exception, 3) System Exception. &#xA;In the case of a system exception, the transaction can be automatically retried." DisplayName="Process Transaction" sap:VirtualizedContainerService.HintSize="1196.8,4480" sap2010:WorkflowViewState.IdRef="State_3">
+            <State x:Name="__ReferenceID2" sap2010:Annotation.AnnotationText="Process a single transaction. &#xA;The result of the processing can be: 1) Success, 2) Business Exception, 3) System Exception. &#xA;In the case of a system exception, the transaction can be automatically retried." DisplayName="Process Transaction" sap:VirtualizedContainerService.HintSize="1196.8,4475.2" sap2010:WorkflowViewState.IdRef="State_3">
               <State.Entry>
-                <TryCatch DisplayName="Try to process transaction" sap:VirtualizedContainerService.HintSize="1152,4004" sap2010:WorkflowViewState.IdRef="TryCatch_9">
+                <TryCatch DisplayName="Try to process transaction" sap:VirtualizedContainerService.HintSize="1152,3999.2" sap2010:WorkflowViewState.IdRef="TryCatch_9">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -282,7 +282,7 @@
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
                   <TryCatch.Try>
-                    <Sequence DisplayName="Process the current TransactionItem" sap:VirtualizedContainerService.HintSize="1115.2,3749.6" sap2010:WorkflowViewState.IdRef="Sequence_28">
+                    <Sequence DisplayName="Process the current TransactionItem" sap:VirtualizedContainerService.HintSize="1115.2,3746.4" sap2010:WorkflowViewState.IdRef="Sequence_28">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -297,7 +297,7 @@
                           <InArgument x:TypeArguments="ui:BusinessRuleException">[Nothing]</InArgument>
                         </Assign.Value>
                       </Assign>
-                      <If Condition="[TransactionItem.SpecificContent(&quot;ServiceType&quot;).ToString.Contains(&quot;Outsource Offshore&quot;)]" DisplayName="If - Get Component Summary Range based on Service Type" sap:VirtualizedContainerService.HintSize="1052.8,557.6" sap2010:WorkflowViewState.IdRef="If_21">
+                      <If Condition="[TransactionItem.SpecificContent(&quot;ServiceType&quot;).ToString.Contains(&quot;Outsource Offshore&quot;)]" DisplayName="If - Get Component Summary Range based on Service Type" sap:VirtualizedContainerService.HintSize="1052.8,556.8" sap2010:WorkflowViewState.IdRef="If_21">
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -322,24 +322,24 @@
                           </Sequence>
                         </If.Then>
                         <If.Else>
-                          <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="496,193.6" sap2010:WorkflowViewState.IdRef="Sequence_86">
+                          <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="496,192.8" sap2010:WorkflowViewState.IdRef="Sequence_86">
                             <sap:WorkflowViewStateService.ViewState>
                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                               </scg:Dictionary>
                             </sap:WorkflowViewStateService.ViewState>
-                            <Assign sap:VirtualizedContainerService.HintSize="433.6,104.8" sap2010:WorkflowViewState.IdRef="Assign_44">
+                            <Assign sap:VirtualizedContainerService.HintSize="433.6,104" sap2010:WorkflowViewState.IdRef="Assign_44">
                               <Assign.To>
                                 <OutArgument x:TypeArguments="x:String">[strComponentSummaryRange]</OutArgument>
                               </Assign.To>
                               <Assign.Value>
-                                <InArgument x:TypeArguments="x:String">[config("ScanProComponentRange").ToString]</InArgument>
+                                <InArgument x:TypeArguments="x:String">[config("ScanOrganizeComponentRange").ToString]</InArgument>
                               </Assign.Value>
                             </Assign>
                           </Sequence>
                         </If.Else>
                       </If>
-                      <If sap2010:Annotation.AnnotationText="The SanityReport_ReadTemplate is called only if is_first_run is True" Condition="[Not TransactionItem.Progress.Contains(&quot;First_ReadTemplate&quot;)]" DisplayName="If SanityReport_ReadTemplate First Run" sap:VirtualizedContainerService.HintSize="1052.8,2652" sap2010:WorkflowViewState.IdRef="If_20">
+                      <If sap2010:Annotation.AnnotationText="The SanityReport_ReadTemplate is called only if is_first_run is True" Condition="[Not TransactionItem.Progress.Contains(&quot;First_ReadTemplate&quot;)]" DisplayName="If SanityReport_ReadTemplate First Run" sap:VirtualizedContainerService.HintSize="1052.8,2649.6" sap2010:WorkflowViewState.IdRef="If_20">
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                             <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
@@ -348,7 +348,7 @@
                           </scg:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
                         <If.Then>
-                          <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="1019.2,2345.6" sap2010:WorkflowViewState.IdRef="Sequence_70">
+                          <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="1019.2,2343.2" sap2010:WorkflowViewState.IdRef="Sequence_70">
                             <Sequence.Variables>
                               <Variable x:TypeArguments="x:String" Name="strFileroomURL" />
                             </Sequence.Variables>
@@ -357,7 +357,7 @@
                                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                               </scg:Dictionary>
                             </sap:WorkflowViewStateService.ViewState>
-                            <Assign DisplayName="Assign - Start Time" sap:VirtualizedContainerService.HintSize="956.8,113.6" sap2010:WorkflowViewState.IdRef="Assign_41">
+                            <Assign DisplayName="Assign - Start Time" sap:VirtualizedContainerService.HintSize="956.8,112.8" sap2010:WorkflowViewState.IdRef="Assign_41">
                               <Assign.To>
                                 <OutArgument x:TypeArguments="s:DateTime">[dtStartTime]</OutArgument>
                               </Assign.To>
@@ -365,7 +365,7 @@
                                 <InArgument x:TypeArguments="s:DateTime">[DateTime.Now.ToLocalTime]</InArgument>
                               </Assign.Value>
                             </Assign>
-                            <Assign DisplayName="Assign - Get Current Transaction from InputSheet" sap:VirtualizedContainerService.HintSize="956.8,113.6" sap2010:WorkflowViewState.IdRef="Assign_36">
+                            <Assign DisplayName="Assign - Get Current Transaction from InputSheet" sap:VirtualizedContainerService.HintSize="956.8,112.8" sap2010:WorkflowViewState.IdRef="Assign_36">
                               <Assign.To>
                                 <OutArgument x:TypeArguments="sd:DataRow">[drRowToUpdate]</OutArgument>
                               </Assign.To>
@@ -378,7 +378,7 @@
                                 </scg:Dictionary>
                               </sap:WorkflowViewStateService.ViewState>
                             </Assign>
-                            <Assign DisplayName="Assign - Fileroom URL" sap:VirtualizedContainerService.HintSize="956.8,113.6" sap2010:WorkflowViewState.IdRef="Assign_42">
+                            <Assign DisplayName="Assign - Fileroom URL" sap:VirtualizedContainerService.HintSize="956.8,112.8" sap2010:WorkflowViewState.IdRef="Assign_42">
                               <Assign.To>
                                 <OutArgument x:TypeArguments="x:String">[strFileroomURL]</OutArgument>
                               </Assign.To>

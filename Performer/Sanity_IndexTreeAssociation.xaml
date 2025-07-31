@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="ThumbnailPageAssociationD_D" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:s1="clr-namespace:Sanity_IndexTreeAssociation;assembly=Sanity_IndexTreeAssociation" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="ThumbnailPageAssociationD_D" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:s1="clr-namespace:Sanity_ReviewTreeValidation;assembly=Sanity_ReviewTreeValidation" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <x:Members>
     <x:Property Name="in_TransactionItem" Type="InArgument(ui:QueueItem)" />
     <x:Property Name="in_dtTestSummaryReport" Type="InOutArgument(sd:DataTable)" />
@@ -27,7 +27,7 @@
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1408.8,2260.8</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1408.8,2043.1999999999998</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ThumbnailPageAssociationD_D_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -85,6 +85,10 @@
       <x:String>SanityReport_GenerateOutput</x:String>
       <x:String>UiPath.DataTableUtilities</x:String>
       <x:String>Sanity_ThumbnailPageAssociation</x:String>
+      <x:String>Sanity_ReviewTreeValidation</x:String>
+      <x:String>System.Text.RegularExpressions</x:String>
+      <x:String>UiPath.Activities.System.Text</x:String>
+      <x:String>TakeScreenshot</x:String>
     </sco:Collection>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
@@ -159,15 +163,18 @@
       <AssemblyReference>System.Collections.Immutable</AssemblyReference>
       <AssemblyReference>System.Linq.Queryable</AssemblyReference>
       <AssemblyReference>System.Memory.Data</AssemblyReference>
+      <AssemblyReference>Sanity_ReviewTreeValidation</AssemblyReference>
+      <AssemblyReference>System.Text.RegularExpressions</AssemblyReference>
+      <AssemblyReference>TakeScreenshot</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Sanity_IndexTreeAssociation" sap:VirtualizedContainerService.HintSize="798.4,2196" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Sanity_IndexTreeAssociation" sap:VirtualizedContainerService.HintSize="798.4,1978.4" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <Sequence DisplayName="IndexTree_ExxonPageAssociation" sap:VirtualizedContainerService.HintSize="736,2107.2" sap2010:WorkflowViewState.IdRef="Sequence_2">
+    <Sequence DisplayName="IndexTree_ExxonPageAssociation" sap:VirtualizedContainerService.HintSize="736,1889.6" sap2010:WorkflowViewState.IdRef="Sequence_2">
       <Sequence.Variables>
         <Variable x:TypeArguments="s:DateTime" Name="dtStartTime" />
         <Variable x:TypeArguments="x:String" Default="Sanity_IndexTreeAssociation" Name="strFlowName" />
@@ -178,7 +185,7 @@
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <If Condition="[Not in_TransactionItem.Progress.Contains(strFlowName+&quot; Success&quot;)]" DisplayName="If - IndexTree_ExxonPageAssociation is successfully run?" sap:VirtualizedContainerService.HintSize="673.6,1995.2" sap2010:WorkflowViewState.IdRef="If_1">
+      <If Condition="[Not in_TransactionItem.Progress.Contains(strFlowName+&quot; Success&quot;)]" DisplayName="If - IndexTree_ExxonPageAssociation is successfully run?" sap:VirtualizedContainerService.HintSize="673.6,1777.6" sap2010:WorkflowViewState.IdRef="If_1">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -186,13 +193,13 @@
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
         <If.Then>
-          <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="640,1579.2" sap2010:WorkflowViewState.IdRef="Sequence_10">
+          <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="640,1361.6" sap2010:WorkflowViewState.IdRef="Sequence_10">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <TryCatch DisplayName="Try Catch - IndexTree_ExxonPageAssociation" sap:VirtualizedContainerService.HintSize="577.6,1490.4" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+            <TryCatch DisplayName="Try Catch - IndexTree_ExxonPageAssociation" sap:VirtualizedContainerService.HintSize="577.6,1272.8" sap2010:WorkflowViewState.IdRef="TryCatch_1">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -200,7 +207,7 @@
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
               <TryCatch.Try>
-                <Sequence DisplayName="Try Body - IndexTree_ExxonPageAssociation" sap:VirtualizedContainerService.HintSize="540.8,1236" sap2010:WorkflowViewState.IdRef="Sequence_3">
+                <Sequence DisplayName="Try Body - IndexTree_ExxonPageAssociation" sap:VirtualizedContainerService.HintSize="540.8,1018.4" sap2010:WorkflowViewState.IdRef="Sequence_3">
                   <Sequence.Variables>
                     <Variable x:TypeArguments="x:String" Name="in_strBinderID" />
                   </Sequence.Variables>
@@ -246,47 +253,7 @@
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
                   </ui:MultipleAssign>
-                  <s1:Sanity_IndexTreeAssociation DisplayName="NewActivity" sap:VirtualizedContainerService.HintSize="478.4,382.4" sap2010:WorkflowViewState.IdRef="Sanity_IndexTreeAssociation_3" inOut_dtTestSummaryReport="[in_dtTestSummaryReport]" in_Config="[in_Config]" in_DocumentFilePathIndexTree="[in_Config(&quot;in_DocumentFilePathIndexTree&quot;).ToString]" in_TransactionItem="[in_TransactionItem]" in_strBinderID="[in_drRowToUpdate(&quot;ExpectedBinderID&quot;).ToString]" in_strSubComponent="Sanity_IndexTreeAssociation" />
-                  <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="478.4,56.8" sap2010:WorkflowViewState.IdRef="CommentOut_4">
-                    <ui:CommentOut.Body>
-                      <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="416,456" sap2010:WorkflowViewState.IdRef="Sequence_14">
-                        <sap:WorkflowViewStateService.ViewState>
-                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                          </scg:Dictionary>
-                        </sap:WorkflowViewStateService.ViewState>
-                        <s1:Sanity_IndexTreeAssociation DisplayName="NewActivity" sap:VirtualizedContainerService.HintSize="354,368" sap2010:WorkflowViewState.IdRef="Sanity_IndexTreeAssociation_2" inOut_dtTestSummaryReport="[in_dtTestSummaryReport]" in_Config="[in_Config]" in_DocumentFilePathIndexTree="[in_Config(&quot;in_DocumentFilePathIndexTree&quot;).ToString]" in_TransactionItem="[in_TransactionItem]" in_strBinderID="[in_drRowToUpdate(&quot;ExpectedBinderID&quot;).ToString]" in_strSubComponent="Sanity_IndexTreeAssociation" />
-                      </Sequence>
-                    </ui:CommentOut.Body>
-                    <sap:WorkflowViewStateService.ViewState>
-                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                      </scg:Dictionary>
-                    </sap:WorkflowViewStateService.ViewState>
-                  </ui:CommentOut>
-                  <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="478.4,56.8" sap2010:WorkflowViewState.IdRef="CommentOut_3">
-                    <ui:CommentOut.Body>
-                      <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="416,456" sap2010:WorkflowViewState.IdRef="Sequence_13">
-                        <sap:WorkflowViewStateService.ViewState>
-                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                          </scg:Dictionary>
-                        </sap:WorkflowViewStateService.ViewState>
-                        <s1:Sanity_IndexTreeAssociation DisplayName="NewActivity" sap:VirtualizedContainerService.HintSize="354,368" sap2010:WorkflowViewState.IdRef="Sanity_IndexTreeAssociation_1" inOut_dtTestSummaryReport="[in_dtTestSummaryReport]" in_Config="[in_Config]" in_DocumentFilePathIndexTree="[in_Config(&quot;in_DocumentFilePathIndexTree&quot;).ToString]" in_strBinderID="[in_drRowToUpdate(&quot;ExpectedBinderID&quot;).ToString]" in_strSubComponent="Sanity_IndexTreeAssociation">
-                          <s1:Sanity_IndexTreeAssociation.in_TransactionItem>
-                            <InArgument x:TypeArguments="ui:QueueItem" />
-                          </s1:Sanity_IndexTreeAssociation.in_TransactionItem>
-                        </s1:Sanity_IndexTreeAssociation>
-                      </Sequence>
-                    </ui:CommentOut.Body>
-                    <sap:WorkflowViewStateService.ViewState>
-                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                      </scg:Dictionary>
-                    </sap:WorkflowViewStateService.ViewState>
-                  </ui:CommentOut>
+                  <s1:Sanity_ReviewTreeValidation DisplayName="ExxonPagevalidation_IndexTree" sap:VirtualizedContainerService.HintSize="478.4,278.4" sap2010:WorkflowViewState.IdRef="Sanity_ReviewTreeValidation_1" in_Config="[in_Config]" in_TransactionItem="[in_TransactionItem]" in_dtTestSummaryReport="[in_dtTestSummaryReport]" in_strBinderID="[in_drRowToUpdate(&quot;ExpectedBinderID&quot;).ToString.Trim]" />
                   <ui:WriteRange StartingCell="{x:Null}" WorkbookPathResource="{x:Null}" AddHeaders="True" DataTable="[in_dtInputData]" DisplayName="Write Range Workbook" sap:VirtualizedContainerService.HintSize="478.4,139.2" sap2010:WorkflowViewState.IdRef="WriteRange_1" SheetName="[in_Config(&quot;SanityTest_InputFileSheetName&quot;).ToString]" WorkbookPath="[in_Config(&quot;SanityTest_InputFilePath&quot;).ToString]" />
                 </Sequence>
               </TryCatch.Try>
@@ -302,14 +269,14 @@
                     <ActivityAction.Argument>
                       <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
                     </ActivityAction.Argument>
-                    <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="540.8,552.8" sap2010:WorkflowViewState.IdRef="Sequence_8">
+                    <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="540.8,553.6" sap2010:WorkflowViewState.IdRef="Sequence_8">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                           <x:Boolean x:Key="IsPinned">False</x:Boolean>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
-                      <Assign DisplayName="Assign - SCD_VerificationQueue - Failed" sap:VirtualizedContainerService.HintSize="478.4,112.8" sap2010:WorkflowViewState.IdRef="Assign_2">
+                      <Assign DisplayName="Assign - SCD_VerificationQueue - Failed" sap:VirtualizedContainerService.HintSize="478.4,113.6" sap2010:WorkflowViewState.IdRef="Assign_2">
                         <Assign.To>
                           <OutArgument x:TypeArguments="x:Object">[in_drRowToUpdate("Status")]</OutArgument>
                         </Assign.To>

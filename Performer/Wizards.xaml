@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Wizards" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:r="clr-namespace:ReviewWizardsDD2024;assembly=ReviewWizardsDD2024" xmlns:r1="clr-namespace:Review_Wizards;assembly=Review_Wizards" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Wizards" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:r="clr-namespace:ReviewWizardsDD2024;assembly=ReviewWizardsDD2024" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <x:Members>
     <x:Property sap2010:Annotation.AnnotationText="Dictionary structure to store configuration data of the process (settings, constants and assets)." Name="in_Config" Type="InArgument(scg:Dictionary(x:String, x:Object))" />
     <x:Property sap2010:Annotation.AnnotationText="Transaction item to be processed." Name="in_TransactionItem" Type="InArgument(ui:QueueItem)" />
@@ -16,7 +16,7 @@
   <this:Wizards.in_strComponentSummaryRange>
     <InArgument x:TypeArguments="x:String" />
   </this:Wizards.in_strComponentSummaryRange>
-  <sap:VirtualizedContainerService.HintSize>1408.8,2820.8</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1408.8,3290.4</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -74,6 +74,7 @@
       <x:String>Fileroom_Login</x:String>
       <x:String>ReviewWizardsDD2024</x:String>
       <x:String>SanityReport_ReadTemplate</x:String>
+      <x:String>Microsoft.VisualBasic.CompilerServices</x:String>
     </sco:Collection>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
@@ -162,9 +163,11 @@
       <AssemblyReference>Fileroom_Login</AssemblyReference>
       <AssemblyReference>ReviewWizardsDD2024</AssemblyReference>
       <AssemblyReference>SanityReport_ReadTemplate</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic.Forms</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic.Core</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Wizards" sap:VirtualizedContainerService.HintSize="736,2756" sap2010:WorkflowViewState.IdRef="Sequence_18">
+  <Sequence DisplayName="Wizards" sap:VirtualizedContainerService.HintSize="736,3225.6" sap2010:WorkflowViewState.IdRef="Sequence_18">
     <Sequence.Variables>
       <Variable x:TypeArguments="s:DateTime" Name="dtStartTime" />
       <Variable x:TypeArguments="x:Int32" Default="3" Name="intComponentRowIndex" />
@@ -182,7 +185,7 @@
         <InArgument x:TypeArguments="x:String">Wizards</InArgument>
       </Assign.Value>
     </Assign>
-    <If Condition="[Not in_TransactionItem.Progress.Contains(out_strProcessName+&quot; Success&quot;)]" DisplayName="If - Wizard is successfully run?" sap:VirtualizedContainerService.HintSize="673.6,2554.4" sap2010:WorkflowViewState.IdRef="If_1">
+    <If Condition="[Not in_TransactionItem.Progress.Contains(out_strProcessName+&quot; Success&quot;)]" DisplayName="If - Wizard is successfully run?" sap:VirtualizedContainerService.HintSize="673.6,3024" sap2010:WorkflowViewState.IdRef="If_1">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -190,13 +193,13 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
       <If.Then>
-        <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="640,2138.4" sap2010:WorkflowViewState.IdRef="Sequence_22">
+        <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="640,2608" sap2010:WorkflowViewState.IdRef="Sequence_22">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <TryCatch DisplayName="Try Catch - Wizards" sap:VirtualizedContainerService.HintSize="577.6,2049.6" sap2010:WorkflowViewState.IdRef="TryCatch_3">
+          <TryCatch DisplayName="Try Catch - Wizards" sap:VirtualizedContainerService.HintSize="577.6,2519.2" sap2010:WorkflowViewState.IdRef="TryCatch_3">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -204,22 +207,31 @@
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
             <TryCatch.Try>
-              <Sequence DisplayName="Try Body - Wizards" sap:VirtualizedContainerService.HintSize="540.8,1795.2" sap2010:WorkflowViewState.IdRef="Sequence_26">
+              <Sequence DisplayName="Try Body - Wizards" sap:VirtualizedContainerService.HintSize="540.8,2264.8" sap2010:WorkflowViewState.IdRef="Sequence_26">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                     <x:Boolean x:Key="IsPinned">False</x:Boolean>
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
-                <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="478.4,56.8" sap2010:WorkflowViewState.IdRef="CommentOut_2">
-                  <ui:CommentOut.Body>
-                    <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="416,256" sap2010:WorkflowViewState.IdRef="Sequence_36">
+                <If Condition="[in_TransactionItem.SpecificContent(&quot;ServiceType&quot;).ToString() = &quot;Outsource Offshore&quot;]" sap:VirtualizedContainerService.HintSize="478.4,531.2" sap2010:WorkflowViewState.IdRef="If_2">
+                  <If.Then>
+                    <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="416,104.8" sap2010:WorkflowViewState.IdRef="Sequence_36">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
-                      <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="FileRoom_Login - Invoke Workflow File (FileRoom_Login.xaml)" sap:VirtualizedContainerService.HintSize="353.6,167.2" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="Performer_ScanOrganize\FileRoom_Login.xaml">
+                    </Sequence>
+                  </If.Then>
+                  <If.Else>
+                    <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="416,256" sap2010:WorkflowViewState.IdRef="Sequence_37">
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                      <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="FileRoom_Login - Invoke Workflow File (FileRoom_Login.xaml)" sap:VirtualizedContainerService.HintSize="353.6,167.2" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_3" UnSafe="False" WorkflowFileName="Performer_ScanOrganize\FileRoom_Login.xaml">
                         <ui:InvokeWorkflowFile.Arguments>
                           <InArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)" x:Key="in_Config">[in_Config]</InArgument>
                           <InArgument x:TypeArguments="ui:QueueItem" x:Key="in_TransactionItem">[in_TransactionItem]</InArgument>
@@ -227,14 +239,8 @@
                         </ui:InvokeWorkflowFile.Arguments>
                       </ui:InvokeWorkflowFile>
                     </Sequence>
-                  </ui:CommentOut.Body>
-                  <sap:WorkflowViewStateService.ViewState>
-                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                      <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                    </scg:Dictionary>
-                  </sap:WorkflowViewStateService.ViewState>
-                </ui:CommentOut>
+                  </If.Else>
+                </If>
                 <ui:LogMessage DisplayName="Log Message - Execution Started" sap:VirtualizedContainerService.HintSize="478.4,174.4" sap2010:WorkflowViewState.IdRef="LogMessage_13" Message="[&quot;************************************************************************&quot;+out_strProcessName+&quot; Started************************************************************************&quot;]" />
                 <ui:MultipleAssign DisplayName="Multiple Assign - BinderID &amp; Application Start Time" sap:VirtualizedContainerService.HintSize="478.4,149.6" sap2010:WorkflowViewState.IdRef="MultipleAssign_5">
                   <ui:MultipleAssign.AssignOperations>
@@ -250,25 +256,7 @@
                     </scg:List>
                   </ui:MultipleAssign.AssignOperations>
                 </ui:MultipleAssign>
-                <r:ReviewWizardsDD2024 DisplayName="ReviewWizards" sap:VirtualizedContainerService.HintSize="478.4,434.4" sap2010:WorkflowViewState.IdRef="ReviewWizardsDD2024_1" in_Config="[New Dictionary(Of String, Object) From {{&quot;RW_Filepath&quot;, &quot;C:\SurePrepLocalFiles\SPReviewWizard\spreviewwizard.exe&quot;},{&quot;ExScreenshotsFolderPath&quot;, &quot;C:\Automation Team\REF_Integration\RPA-Folder\2024\Exceptions_Screenshots\&quot;},{&quot;PickActivityTimeout&quot;, &quot;300&quot;},{&quot;SanityReport_ReportPath&quot;, &quot;C:\Automation Team\REF_Integration\RPA-Folder\2024\Output\Test Summary Report\Performer&quot;},{&quot;SanityReport_TemplatePath&quot;, &quot;C:\Automation Team\REF_Integration\RPA-Folder\2024\RPA-Internal\Test Summary Template\ReportTemplate.xlsx&quot;},{&quot;SanityReport_FilesheetName&quot;, &quot;Test Cases&quot;},{&quot;int_PageRetry&quot;, &quot;6&quot;},{&quot;Time_RetryInterval&quot;, &quot;00:00:02&quot;},{&quot;Flow_Type&quot;, &quot;API_Sanity&quot;},{&quot;Demp_Year&quot;, &quot;2023&quot;},{&quot;Tax_Year&quot;, &quot;2024&quot;},{&quot;Default_SSN&quot;, &quot;IncorrectSSN&quot;},{&quot;TaxPayer_SSN&quot;, &quot;111-11-1111&quot;},{&quot;Spouse_SSN&quot;, &quot;222-22-2222&quot;},{&quot;Finalize_Path&quot;, &quot;C:\SurePrepLocalFiles\SPbinder\sureprep.commonapplauncher.exe&quot;},{&quot;TimeOut_Finalize&quot;, &quot;100&quot;},{&quot;TimeOut_Export&quot;, &quot;150&quot;},{&quot;Timeout_L&quot;, &quot;30&quot;}}]" in_TaxSoftware="[in_TransactionItem.SpecificContent(&quot;TaxSoftware&quot;).ToString]" in_TransactionItem="[in_TransactionItem]" in_isAPI="No" in_strBinderID="[in_strBinderID]" io_dt_TestSummaryReport="[in_dtTestSummaryReport]" out_Wages_ListData="[out_ListWagesData]" />
-                <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="478.4,56.8" sap2010:WorkflowViewState.IdRef="CommentOut_1">
-                  <ui:CommentOut.Body>
-                    <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="416,514.4" sap2010:WorkflowViewState.IdRef="Sequence_35">
-                      <sap:WorkflowViewStateService.ViewState>
-                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                        </scg:Dictionary>
-                      </sap:WorkflowViewStateService.ViewState>
-                      <r1:ReviewWizards sap:VirtualizedContainerService.HintSize="353.6,425.6" sap2010:WorkflowViewState.IdRef="ReviewWizards_2" in_Config="[New Dictionary(Of String, Object) From {{&quot;RW_Filepath&quot;, &quot;C:\SurePrepLocalFiles\SPReviewWizard\spreviewwizard.exe&quot;},{&quot;ExScreenshotsFolderPath&quot;, &quot;C:\Automation Team\REF_Integration\RPA-Folder\2024\Exceptions_Screenshots\&quot;},{&quot;PickActivityTimeout&quot;, &quot;300&quot;},{&quot;SanityReport_ReportPath&quot;, &quot;C:\Automation Team\REF_Integration\RPA-Folder\2024\Output\Test Summary Report\Performer&quot;},{&quot;SanityReport_TemplatePath&quot;, &quot;C:\Automation Team\REF_Integration\RPA-Folder\2024\RPA-Internal\Test Summary Template\ReportTemplate.xlsx&quot;},{&quot;SanityReport_FilesheetName&quot;, &quot;Test Cases&quot;},{&quot;int_PageRetry&quot;, &quot;6&quot;},{&quot;Time_RetryInterval&quot;, &quot;00:00:02&quot;},{&quot;Flow_Type&quot;, &quot;API_Sanity&quot;},{&quot;Demp_Year&quot;, &quot;2023&quot;},{&quot;Tax_Year&quot;, &quot;2024&quot;},{&quot;Default_SSN&quot;, &quot;IncorrectSSN&quot;},{&quot;TaxPayer_SSN&quot;, &quot;111-11-1111&quot;},{&quot;Spouse_SSN&quot;, &quot;123-45-6789&quot;}}]" in_TaxSoftware="[in_TransactionItem.SpecificContent(&quot;TaxSoftware&quot;).ToString]" in_TransactionItem="[in_TransactionItem]" in_isAPI="No" in_strBinderID="[in_strBinderID]" io_dt_TestSummaryReport="[in_dtTestSummaryReport]" out_Wages_ListData="[out_ListWagesData]" />
-                    </Sequence>
-                  </ui:CommentOut.Body>
-                  <sap:WorkflowViewStateService.ViewState>
-                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                      <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                    </scg:Dictionary>
-                  </sap:WorkflowViewStateService.ViewState>
-                </ui:CommentOut>
+                <r:ReviewWizardsDD2024 DisplayName="ReviewWizards" sap:VirtualizedContainerService.HintSize="478.4,486.4" sap2010:WorkflowViewState.IdRef="ReviewWizardsDD2024_2" in_Config="[New Dictionary(Of String, Object) From {{&quot;RW_Filepath&quot;, &quot;C:\SurePrepLocalFiles\SPReviewWizard\spreviewwizard.exe&quot;},{&quot;ExScreenshotsFolderPath&quot;, &quot;C:\Automation Team\REF_Integration\RPA-Folder\2024\Exceptions_Screenshots\&quot;},{&quot;PickActivityTimeout&quot;, &quot;300&quot;},{&quot;SanityReport_ReportPath&quot;, &quot;C:\Automation Team\REF_Integration\RPA-Folder\2024\Output\Test Summary Report\Performer&quot;},{&quot;SanityReport_TemplatePath&quot;, &quot;C:\Automation Team\REF_Integration\RPA-Folder\2024\RPA-Internal\Test Summary Template\ReportTemplate.xlsx&quot;},{&quot;SanityReport_FilesheetName&quot;, &quot;Test Cases&quot;},{&quot;int_PageRetry&quot;, &quot;6&quot;},{&quot;Time_RetryInterval&quot;, &quot;00:00:02&quot;},{&quot;Flow_Type&quot;, &quot;API_Sanity&quot;},{&quot;Demp_Year&quot;, &quot;2023&quot;},{&quot;Tax_Year&quot;, &quot;2024&quot;},{&quot;Default_SSN&quot;, &quot;IncorrectSSN&quot;},{&quot;TaxPayer_SSN&quot;, &quot;111-11-1111&quot;},{&quot;Spouse_SSN&quot;, &quot;123-45-6789&quot;},{&quot;Finalize_Path&quot;, &quot;C:\SurePrepLocalFiles\SPbinder\sureprep.commonapplauncher.exe&quot;},{&quot;TimeOut_Finalize&quot;, &quot;100&quot;},{&quot;TimeOut_Export&quot;, &quot;150&quot;},{&quot;Timeout_L&quot;, &quot;30&quot;}}]" in_FlowType="Taxcaddy Flow" in_TaxSoftware="[in_TransactionItem.SpecificContent(&quot;TaxSoftware&quot;).ToString]" in_TransactionItem="[in_TransactionItem]" in_isAPI="No" in_strBinderID="[in_strBinderID]" io_dt_TestSummaryReport="[in_dtTestSummaryReport]" out_Wages_ListData="[out_ListWagesData]" />
                 <Delay Duration="00:00:10" sap:VirtualizedContainerService.HintSize="478.4,122.4" sap2010:WorkflowViewState.IdRef="Delay_1" />
                 <ui:MultipleAssign sap2010:Annotation.AnnotationText="1. Update component status in Reporter&#xA;2. Update component status in  Input sheet" DisplayName="Multiple Assign - Execution Status" sap:VirtualizedContainerService.HintSize="478.4,224" sap2010:WorkflowViewState.IdRef="MultipleAssign_4">
                   <ui:MultipleAssign.AssignOperations>

@@ -12,7 +12,7 @@
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1408.8,6210.4</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1408.8,6167.2</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ExportToTaxSoftware_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -140,7 +140,7 @@
       <AssemblyReference>System.Memory.Data</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="SPBinder_Export" sap:VirtualizedContainerService.HintSize="1398.4,6145.6" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="SPBinder_Export" sap:VirtualizedContainerService.HintSize="1398.4,6102.4" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="strScreenshotPath" />
       <Variable x:TypeArguments="x:String" Default="SPBinder_Export" Name="strSubComponent" />
@@ -153,7 +153,7 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <TryCatch DisplayName="Try Catch - SPBinder_ExportData" sap:VirtualizedContainerService.HintSize="1336,6056.8" sap2010:WorkflowViewState.IdRef="TryCatch_3">
+    <TryCatch DisplayName="Try Catch - SPBinder_ExportData" sap:VirtualizedContainerService.HintSize="1336,6013.6" sap2010:WorkflowViewState.IdRef="TryCatch_3">
       <TryCatch.Variables>
         <Variable x:TypeArguments="x:String" Default="SPBinder_Export" Name="strFlowName" />
       </TryCatch.Variables>
@@ -164,13 +164,13 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
       <TryCatch.Try>
-        <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Application: SPbinder - SPBinder_ExportData" sap:VirtualizedContainerService.HintSize="1299.2,5802.4" sap2010:WorkflowViewState.IdRef="NApplicationCard_2" OpenMode="Never" ScopeGuid="89adf698-f11b-4ccb-9f05-78ab0c247313" Version="V2">
+        <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Application: SPbinder - SPBinder_ExportData" sap:VirtualizedContainerService.HintSize="1299.2,5759.2" sap2010:WorkflowViewState.IdRef="NApplicationCard_2" OpenMode="Never" ScopeGuid="89adf698-f11b-4ccb-9f05-78ab0c247313" Version="V2">
           <uix:NApplicationCard.Body>
             <ActivityAction x:TypeArguments="x:Object">
               <ActivityAction.Argument>
                 <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
               </ActivityAction.Argument>
-              <Sequence DisplayName="Do - Use Application: SPbinder - SPBinder_ExportData" sap:VirtualizedContainerService.HintSize="1265.6,5511.2" sap2010:WorkflowViewState.IdRef="Sequence_10">
+              <Sequence DisplayName="Do - Use Application: SPbinder - SPBinder_ExportData" sap:VirtualizedContainerService.HintSize="1265.6,5468" sap2010:WorkflowViewState.IdRef="Sequence_10">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -246,9 +246,9 @@
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
                 </uix:NCheckState>
-                <uix:NCheckState DisplayName="Check App State - Export Proceed button" sap:VirtualizedContainerService.HintSize="1203.2,4375.2" sap2010:WorkflowViewState.IdRef="NCheckState_6" ScopeIdentifier="89adf698-f11b-4ccb-9f05-78ab0c247313" Version="V3">
+                <uix:NCheckState DisplayName="Check App State - Export Proceed button" sap:VirtualizedContainerService.HintSize="1203.2,4332" sap2010:WorkflowViewState.IdRef="NCheckState_6" ScopeIdentifier="89adf698-f11b-4ccb-9f05-78ab0c247313" Version="V3">
                   <uix:NCheckState.IfExists>
-                    <Sequence DisplayName="Export Window Appeared" sap:VirtualizedContainerService.HintSize="700.8,4124.8" sap2010:WorkflowViewState.IdRef="Sequence_9">
+                    <Sequence DisplayName="Export Window Appeared" sap:VirtualizedContainerService.HintSize="700.8,4081.6" sap2010:WorkflowViewState.IdRef="Sequence_9">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -263,13 +263,13 @@
                           <InArgument x:TypeArguments="s:DateTime">[DateTime.Now.ToLocalTime]</InArgument>
                         </Assign.Value>
                       </Assign>
-                      <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Application: SPbinder - Export to Lacerte" sap:VirtualizedContainerService.HintSize="638.4,3264.8" sap2010:WorkflowViewState.IdRef="NApplicationCard_3" ScopeGuid="3f1633fe-c1b4-4609-b72e-6f85576f53f6" Version="V2">
+                      <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Application: SPbinder - Export to Lacerte" sap:VirtualizedContainerService.HintSize="638.4,3221.6" sap2010:WorkflowViewState.IdRef="NApplicationCard_3" ScopeGuid="3f1633fe-c1b4-4609-b72e-6f85576f53f6" Version="V2">
                         <uix:NApplicationCard.Body>
                           <ActivityAction x:TypeArguments="x:Object">
                             <ActivityAction.Argument>
                               <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
                             </ActivityAction.Argument>
-                            <Sequence DisplayName="Lacerte Export Steps" sap:VirtualizedContainerService.HintSize="604.8,2941.6" sap2010:WorkflowViewState.IdRef="Sequence_20">
+                            <Sequence DisplayName="Lacerte Export Steps" sap:VirtualizedContainerService.HintSize="604.8,2898.4" sap2010:WorkflowViewState.IdRef="Sequence_20">
                               <sap:WorkflowViewStateService.ViewState>
                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -303,7 +303,7 @@
                                   </scg:Dictionary>
                                 </sap:WorkflowViewStateService.ViewState>
                               </uix:NClick>
-                              <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'C:\LACERTE\23TAX\FDATA\…'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="542.4,250.4" sap2010:WorkflowViewState.IdRef="NTypeInto_1" ScopeIdentifier="3f1633fe-c1b4-4609-b72e-6f85576f53f6" Text="[&quot;C:\&quot;+in_TransactionItem.SpecificContent(&quot;ClientID&quot;).ToString + &quot;[k(Enter)]&quot;]" Version="V3">
+                              <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'C:\LACERTE\23TAX\FDATA\…'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="542.4,250.4" sap2010:WorkflowViewState.IdRef="NTypeInto_1" ScopeIdentifier="3f1633fe-c1b4-4609-b72e-6f85576f53f6" Text="[in_TransactionItem.SpecificContent(&quot;TaxFilePath&quot;).ToString]" Version="V3">
                                 <uix:NTypeInto.Target>
                                   <uix:TargetAnchorable CVScreenId="d66f4340-f89b-4617-8297-ed2a50b6fb8a" CvElementArea="17, 128, 449, 28" CvType="InputBox" DesignTimeRectangle="20, 129, 444, 27" DesignTimeScaleFactor="1.25" ElementType="InputBox" FullSelectorArgument="&lt;ctrl role='editable text' /&gt;" FuzzySelectorArgument="&lt;ctrl role='editable text' automationid='' /&gt;" Guid="c30763db-6e8f-40e7-b159-1d07badcd274" InformativeScreenshot="cae99e56993f5ed6c5889d120b3ab566.png" ScopeSelectorArgument="&lt;wnd app='spbinder.exe' cls='HwndWrapper*' title='SPbinder - Export to Lacerte' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V2" Visibility="Interactive" />
                                 </uix:NTypeInto.Target>
@@ -367,9 +367,9 @@
                                 </sap:WorkflowViewStateService.ViewState>
                               </ui:LogMessage>
                               <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="542.4,176" sap2010:WorkflowViewState.IdRef="LogMessage_21" Level="Info" Message="[&quot;Verify the Export jobs with Added  Document should begin successfully: Pass&quot;]" />
-                              <uix:NCheckState DisplayName="Check App State 'Checking States'" EnableIfNotExists="False" sap:VirtualizedContainerService.HintSize="542.4,737.6" sap2010:WorkflowViewState.IdRef="NCheckState_8" ScopeIdentifier="89adf698-f11b-4ccb-9f05-78ab0c247313" Timeout="10" Version="V3">
+                              <uix:NCheckState DisplayName="Check App State 'Checking States'" EnableIfNotExists="False" sap:VirtualizedContainerService.HintSize="542.4,739.2" sap2010:WorkflowViewState.IdRef="NCheckState_8" ScopeIdentifier="89adf698-f11b-4ccb-9f05-78ab0c247313" Timeout="10" Version="V3">
                                 <uix:NCheckState.IfExists>
-                                  <Sequence DisplayName="Sign in to Lacerte" sap:VirtualizedContainerService.HintSize="499.2,487.2" sap2010:WorkflowViewState.IdRef="Sequence_15">
+                                  <Sequence DisplayName="Sign in to Lacerte" sap:VirtualizedContainerService.HintSize="499.2,488.8" sap2010:WorkflowViewState.IdRef="Sequence_15">
                                     <sap:WorkflowViewStateService.ViewState>
                                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -398,7 +398,7 @@
                                             <ActivityAction.Argument>
                                               <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
                                             </ActivityAction.Argument>
-                                            <ui:LogMessage DisplayName="Log Message - Lacerte Login Failed" sap:VirtualizedContainerService.HintSize="334.4,144" sap2010:WorkflowViewState.IdRef="LogMessage_22" Level="[UiPath.Core.Activities.LogLevel.Error]" Message="[&quot;Failed to login to Lacerte tax software.&quot;]">
+                                            <ui:LogMessage DisplayName="Log Message - Lacerte Login Failed" sap:VirtualizedContainerService.HintSize="334.4,142.4" sap2010:WorkflowViewState.IdRef="LogMessage_22" Level="[UiPath.Core.Activities.LogLevel.Error]" Message="[&quot;Failed to login to Lacerte tax software.&quot;]">
                                               <sap:WorkflowViewStateService.ViewState>
                                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -431,7 +431,7 @@
                                   </scg:Dictionary>
                                 </sap:WorkflowViewStateService.ViewState>
                               </uix:NCheckState>
-                              <uix:NCheckState DisplayName="Check App State -  State Popup" EnableIfNotExists="False" sap:VirtualizedContainerService.HintSize="542.4,444" sap2010:WorkflowViewState.IdRef="NCheckState_9" ScopeIdentifier="3f1633fe-c1b4-4609-b72e-6f85576f53f6" Timeout="30" Version="V3">
+                              <uix:NCheckState DisplayName="Check App State -  State Popup" EnableIfNotExists="False" sap:VirtualizedContainerService.HintSize="542.4,444" sap2010:WorkflowViewState.IdRef="NCheckState_9" ScopeIdentifier="3f1633fe-c1b4-4609-b72e-6f85576f53f6" Version="V3">
                                 <uix:NCheckState.IfExists>
                                   <uix:NClick ActivateBefore="True" ClickType="Single" ContinueOnError="True" DisplayName="Click - OK" sap:VirtualizedContainerService.HintSize="333.6,193.6" sap2010:WorkflowViewState.IdRef="NClick_11" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="3f1633fe-c1b4-4609-b72e-6f85576f53f6" Version="V3">
                                     <uix:NClick.Target>
@@ -486,12 +486,13 @@
                                   </scg:Dictionary>
                                 </sap:WorkflowViewStateService.ViewState>
                               </uix:NCheckState>
-                              <uix:NCheckState DisplayName="Check App State -  Export completed" EnableIfNotExists="False" sap:VirtualizedContainerService.HintSize="542.4,509.6" sap2010:WorkflowViewState.IdRef="NCheckState_10" ScopeIdentifier="3f1633fe-c1b4-4609-b72e-6f85576f53f6" Timeout="180" Version="V3">
+                              <uix:NCheckState DisplayName="Check App State -  Export completed" EnableIfNotExists="False" sap:VirtualizedContainerService.HintSize="542.4,275.2" sap2010:WorkflowViewState.IdRef="NCheckState_10" ScopeIdentifier="3f1633fe-c1b4-4609-b72e-6f85576f53f6" Timeout="180" Version="V3">
                                 <uix:NCheckState.IfExists>
-                                  <Sequence sap:VirtualizedContainerService.HintSize="449.6,259.2" sap2010:WorkflowViewState.IdRef="Sequence_17">
+                                  <Sequence sap:VirtualizedContainerService.HintSize="449.6,24.8" sap2010:WorkflowViewState.IdRef="Sequence_17">
                                     <sap:WorkflowViewStateService.ViewState>
                                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                       </scg:Dictionary>
                                     </sap:WorkflowViewStateService.ViewState>
                                     <ui:LogMessage DisplayName="Log Message - Export TC_01" sap:VirtualizedContainerService.HintSize="387.2,168.8" sap2010:WorkflowViewState.IdRef="LogMessage_24" Message="[&quot;TC_01&#x9;Export data to the Tax Software and close the application, verifying successful export. Passed&quot;]" />
@@ -516,78 +517,112 @@
                                   </scg:Dictionary>
                                 </sap:WorkflowViewStateService.ViewState>
                               </uix:NCheckState>
-                              <TryCatch DisplayName="Try Catch - Close Export Window" sap:VirtualizedContainerService.HintSize="542.4,49.6" sap2010:WorkflowViewState.IdRef="TryCatch_5">
+                              <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click - Close Export Window" sap:VirtualizedContainerService.HintSize="542.4,189.6" sap2010:WorkflowViewState.IdRef="NClick_13" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="3f1633fe-c1b4-4609-b72e-6f85576f53f6" Version="V3">
+                                <uix:NClick.Target>
+                                  <uix:TargetAnchorable CVScreenId="aa0212a9-6959-419a-afe9-ff7193ecbc4d" CvElementArea="373, 167, 81, 27" CvTextArea="397, 173, 33, 13" CvTextArgument="Close" CvType="Button" DesignTimeRectangle="400, 173, 28, 15" DesignTimeScaleFactor="1" ElementType="Text" FullSelectorArgument="&lt;ctrl idx='2' name='Close' role='push button' /&gt;&lt;ctrl name='Close' role='text' /&gt;" FuzzySelectorArgument="&lt;ctrl name='Close' role='push button' /&gt;&lt;ctrl name='Close' role='text' automationid='' check:text='Close' /&gt;" Guid="738b0c4c-2493-49e6-8c31-37379baf1607" InformativeScreenshot="0c2497f47a907b99c3517d392a04f997.png" ScopeSelectorArgument="&lt;wnd app='spbinder.exe' cls='HwndWrapper*' title='SPbinder - Export to Lacerte' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V2" Visibility="Visible" WaitForReadyArgument="Complete">
+                                    <uix:TargetAnchorable.Anchors>
+                                      <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                        <uix:Target CVScreenId="aa0212a9-6959-419a-afe9-ff7193ecbc4d" CvElementArea="373, 167, 81, 27" CvTextArea="397, 173, 33, 13" CvTextArgument="Close" CvType="Button" DesignTimeRectangle="374, 168, 80, 25" ElementType="Button" FullSelectorArgument="&lt;ctrl idx='2' name='Close' role='push button' /&gt;" FuzzySelectorArgument="&lt;ctrl automationid='' name='Close' role='push button' check:text='Close' /&gt;" Guid="77d191fb-af97-4438-b9f8-7ed131d34aae" SearchSteps="Selector, FuzzySelector" />
+                                      </scg:List>
+                                    </uix:TargetAnchorable.Anchors>
+                                  </uix:TargetAnchorable>
+                                </uix:NClick.Target>
                                 <sap:WorkflowViewStateService.ViewState>
                                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                    <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                     <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                   </scg:Dictionary>
                                 </sap:WorkflowViewStateService.ViewState>
-                                <TryCatch.Try>
-                                  <ui:RetryScope DisplayName="Retry Scope - Close Export Window" sap:VirtualizedContainerService.HintSize="375.2,496" sap2010:WorkflowViewState.IdRef="RetryScope_1" NumberOfRetries="3">
-                                    <ui:RetryScope.ActivityBody>
-                                      <ActivityAction>
-                                        <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click - Close Export Window" sap:VirtualizedContainerService.HintSize="333.6,157.6" sap2010:WorkflowViewState.IdRef="NClick_12" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="3f1633fe-c1b4-4609-b72e-6f85576f53f6" Version="V3">
-                                          <uix:NClick.Target>
-                                            <uix:TargetAnchorable CVScreenId="aa0212a9-6959-419a-afe9-ff7193ecbc4d" CvElementArea="373, 167, 81, 27" CvTextArea="397, 173, 33, 13" CvTextArgument="Close" CvType="Button" DesignTimeRectangle="400, 173, 28, 15" DesignTimeScaleFactor="1" ElementType="Text" FullSelectorArgument="&lt;ctrl idx='2' name='Close' role='push button' /&gt;&lt;ctrl name='Close' role='text' /&gt;" FuzzySelectorArgument="&lt;ctrl name='Close' role='push button' /&gt;&lt;ctrl name='Close' role='text' automationid='' check:text='Close' /&gt;" Guid="738b0c4c-2493-49e6-8c31-37379baf1607" InformativeScreenshot="0c2497f47a907b99c3517d392a04f997.png" ScopeSelectorArgument="&lt;wnd app='spbinder.exe' cls='HwndWrapper*' title='SPbinder - Export to Lacerte' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V2" Visibility="Visible" WaitForReadyArgument="Complete">
-                                              <uix:TargetAnchorable.Anchors>
-                                                <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
-                                                  <uix:Target CVScreenId="aa0212a9-6959-419a-afe9-ff7193ecbc4d" CvElementArea="373, 167, 81, 27" CvTextArea="397, 173, 33, 13" CvTextArgument="Close" CvType="Button" DesignTimeRectangle="374, 168, 80, 25" ElementType="Button" FullSelectorArgument="&lt;ctrl idx='2' name='Close' role='push button' /&gt;" FuzzySelectorArgument="&lt;ctrl automationid='' name='Close' role='push button' check:text='Close' /&gt;" Guid="77d191fb-af97-4438-b9f8-7ed131d34aae" SearchSteps="Selector, FuzzySelector" />
-                                                </scg:List>
-                                              </uix:TargetAnchorable.Anchors>
-                                            </uix:TargetAnchorable>
-                                          </uix:NClick.Target>
+                              </uix:NClick>
+                              <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="542.4,49.6" sap2010:WorkflowViewState.IdRef="CommentOut_1">
+                                <ui:CommentOut.Body>
+                                  <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="416,136.8" sap2010:WorkflowViewState.IdRef="Sequence_21">
+                                    <sap:WorkflowViewStateService.ViewState>
+                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                      </scg:Dictionary>
+                                    </sap:WorkflowViewStateService.ViewState>
+                                    <TryCatch DisplayName="Try Catch - Close Export Window" sap:VirtualizedContainerService.HintSize="353.6,48" sap2010:WorkflowViewState.IdRef="TryCatch_5">
+                                      <sap:WorkflowViewStateService.ViewState>
+                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                        </scg:Dictionary>
+                                      </sap:WorkflowViewStateService.ViewState>
+                                      <TryCatch.Try>
+                                        <ui:RetryScope DisplayName="Retry Scope - Close Export Window" sap:VirtualizedContainerService.HintSize="375.2,496" sap2010:WorkflowViewState.IdRef="RetryScope_1">
+                                          <ui:RetryScope.ActivityBody>
+                                            <ActivityAction>
+                                              <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click - Close Export Window" sap:VirtualizedContainerService.HintSize="333.6,157.6" sap2010:WorkflowViewState.IdRef="NClick_12" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="3f1633fe-c1b4-4609-b72e-6f85576f53f6" Version="V3">
+                                                <uix:NClick.Target>
+                                                  <uix:TargetAnchorable CVScreenId="aa0212a9-6959-419a-afe9-ff7193ecbc4d" CvElementArea="373, 167, 81, 27" CvTextArea="397, 173, 33, 13" CvTextArgument="Close" CvType="Button" DesignTimeRectangle="400, 173, 28, 15" DesignTimeScaleFactor="1" ElementType="Text" FullSelectorArgument="&lt;ctrl idx='2' name='Close' role='push button' /&gt;&lt;ctrl name='Close' role='text' /&gt;" FuzzySelectorArgument="&lt;ctrl name='Close' role='push button' /&gt;&lt;ctrl name='Close' role='text' automationid='' check:text='Close' /&gt;" Guid="738b0c4c-2493-49e6-8c31-37379baf1607" InformativeScreenshot="0c2497f47a907b99c3517d392a04f997.png" ScopeSelectorArgument="&lt;wnd app='spbinder.exe' cls='HwndWrapper*' title='SPbinder - Export to Lacerte' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V2" Visibility="Visible" WaitForReadyArgument="Complete">
+                                                    <uix:TargetAnchorable.Anchors>
+                                                      <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                                        <uix:Target CVScreenId="aa0212a9-6959-419a-afe9-ff7193ecbc4d" CvElementArea="373, 167, 81, 27" CvTextArea="397, 173, 33, 13" CvTextArgument="Close" CvType="Button" DesignTimeRectangle="374, 168, 80, 25" ElementType="Button" FullSelectorArgument="&lt;ctrl idx='2' name='Close' role='push button' /&gt;" FuzzySelectorArgument="&lt;ctrl automationid='' name='Close' role='push button' check:text='Close' /&gt;" Guid="77d191fb-af97-4438-b9f8-7ed131d34aae" SearchSteps="Selector, FuzzySelector" />
+                                                      </scg:List>
+                                                    </uix:TargetAnchorable.Anchors>
+                                                  </uix:TargetAnchorable>
+                                                </uix:NClick.Target>
+                                                <sap:WorkflowViewStateService.ViewState>
+                                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                                  </scg:Dictionary>
+                                                </sap:WorkflowViewStateService.ViewState>
+                                              </uix:NClick>
+                                            </ActivityAction>
+                                          </ui:RetryScope.ActivityBody>
+                                          <ui:RetryScope.Condition>
+                                            <ActivityFunc x:TypeArguments="x:Boolean">
+                                              <uix:NCheckState DisplayName="Check App State - Close Export Window" EnableIfExists="False" EnableIfNotExists="False" sap:VirtualizedContainerService.HintSize="333.6,178.4" sap2010:WorkflowViewState.IdRef="NCheckState_11" Version="V3">
+                                                <uix:NCheckState.Target>
+                                                  <uix:TargetAnchorable DesignTimeRectangle="0, 0, 0, 0" FullSelectorArgument="&lt;ctrl idx='2' name='Close' role='push button' /&gt;&lt;ctrl name='Close' role='text' /&gt;" FuzzySelectorArgument="&lt;ctrl name='Close' role='push button' /&gt;&lt;ctrl name='Close' role='text' automationid='' check:text='Close' /&gt;" Guid="5c39d8c9-a40f-4cad-bf3a-f810e949981d" ScopeSelectorArgument="&lt;wnd app='spbinder.exe' cls='HwndWrapper*' title='SPbinder - Export to Lacerte' /&gt;" SearchSteps="Selector, FuzzySelector" />
+                                                </uix:NCheckState.Target>
+                                              </uix:NCheckState>
+                                            </ActivityFunc>
+                                          </ui:RetryScope.Condition>
                                           <sap:WorkflowViewStateService.ViewState>
                                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                               <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                             </scg:Dictionary>
                                           </sap:WorkflowViewStateService.ViewState>
-                                        </uix:NClick>
-                                      </ActivityAction>
-                                    </ui:RetryScope.ActivityBody>
-                                    <ui:RetryScope.Condition>
-                                      <ActivityFunc x:TypeArguments="x:Boolean">
-                                        <uix:NCheckState DisplayName="Check App State - Close Export Window" EnableIfExists="False" EnableIfNotExists="False" sap:VirtualizedContainerService.HintSize="333.6,178.4" sap2010:WorkflowViewState.IdRef="NCheckState_11" Version="V3">
-                                          <uix:NCheckState.Target>
-                                            <uix:TargetAnchorable DesignTimeRectangle="0, 0, 0, 0" FullSelectorArgument="&lt;ctrl idx='2' name='Close' role='push button' /&gt;&lt;ctrl name='Close' role='text' /&gt;" FuzzySelectorArgument="&lt;ctrl name='Close' role='push button' /&gt;&lt;ctrl name='Close' role='text' automationid='' check:text='Close' /&gt;" Guid="5c39d8c9-a40f-4cad-bf3a-f810e949981d" ScopeSelectorArgument="&lt;wnd app='spbinder.exe' cls='HwndWrapper*' title='SPbinder - Export to Lacerte' /&gt;" SearchSteps="Selector, FuzzySelector" />
-                                          </uix:NCheckState.Target>
-                                        </uix:NCheckState>
-                                      </ActivityFunc>
-                                    </ui:RetryScope.Condition>
-                                    <sap:WorkflowViewStateService.ViewState>
-                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-                                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                                      </scg:Dictionary>
-                                    </sap:WorkflowViewStateService.ViewState>
-                                  </ui:RetryScope>
-                                </TryCatch.Try>
-                                <TryCatch.Catches>
-                                  <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="403.2,23.2" sap2010:WorkflowViewState.IdRef="Catch`1_4">
-                                    <sap:WorkflowViewStateService.ViewState>
-                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-                                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                                      </scg:Dictionary>
-                                    </sap:WorkflowViewStateService.ViewState>
-                                    <ActivityAction x:TypeArguments="s:Exception">
-                                      <ActivityAction.Argument>
-                                        <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
-                                      </ActivityAction.Argument>
-                                    </ActivityAction>
-                                  </Catch>
-                                </TryCatch.Catches>
-                                <TryCatch.Finally>
-                                  <Sequence DisplayName="Finally" sap:VirtualizedContainerService.HintSize="416,89.6" sap2010:WorkflowViewState.IdRef="Sequence_19">
-                                    <sap:WorkflowViewStateService.ViewState>
-                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                      </scg:Dictionary>
-                                    </sap:WorkflowViewStateService.ViewState>
+                                        </ui:RetryScope>
+                                      </TryCatch.Try>
+                                      <TryCatch.Catches>
+                                        <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="403.2,23.2" sap2010:WorkflowViewState.IdRef="Catch`1_4">
+                                          <sap:WorkflowViewStateService.ViewState>
+                                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                              <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                            </scg:Dictionary>
+                                          </sap:WorkflowViewStateService.ViewState>
+                                          <ActivityAction x:TypeArguments="s:Exception">
+                                            <ActivityAction.Argument>
+                                              <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
+                                            </ActivityAction.Argument>
+                                          </ActivityAction>
+                                        </Catch>
+                                      </TryCatch.Catches>
+                                      <TryCatch.Finally>
+                                        <Sequence DisplayName="Finally" sap:VirtualizedContainerService.HintSize="416,89.6" sap2010:WorkflowViewState.IdRef="Sequence_19">
+                                          <sap:WorkflowViewStateService.ViewState>
+                                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                            </scg:Dictionary>
+                                          </sap:WorkflowViewStateService.ViewState>
+                                        </Sequence>
+                                      </TryCatch.Finally>
+                                    </TryCatch>
                                   </Sequence>
-                                </TryCatch.Finally>
-                              </TryCatch>
+                                </ui:CommentOut.Body>
+                                <sap:WorkflowViewStateService.ViewState>
+                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                    <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                  </scg:Dictionary>
+                                </sap:WorkflowViewStateService.ViewState>
+                              </ui:CommentOut>
                             </Sequence>
                           </ActivityAction>
                         </uix:NApplicationCard.Body>
@@ -681,7 +716,7 @@
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
                 </s2:SanityReport_GenerateOutput>
-                <ui:MultipleAssign sap2010:Annotation.AnnotationText="1. Update component status in Reporter&#xA;2. Update component status in  Input sheet" DisplayName="Multiple Assign - Execution Status" sap:VirtualizedContainerService.HintSize="969.6,224" sap2010:WorkflowViewState.IdRef="MultipleAssign_2">
+                <ui:MultipleAssign sap2010:Annotation.AnnotationText="1. Update component status in Reporter&#xA;2. Update component status in  Input sheet" DisplayName="Multiple Assign - Execution Status" sap:VirtualizedContainerService.HintSize="1203.2,224" sap2010:WorkflowViewState.IdRef="MultipleAssign_2">
                   <ui:MultipleAssign.AssignOperations>
                     <scg:List x:TypeArguments="ui:AssignOperation" Capacity="4">
                       <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_6">

@@ -12,7 +12,7 @@
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1408.8,5117.6</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1408.8,5682.4</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>Lacerte_ExportValidation_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -133,15 +133,16 @@
       <AssemblyReference>UiPath.CV</AssemblyReference>
       <AssemblyReference>UiPath.UIAutomationNext.Activities.Design</AssemblyReference>
       <AssemblyReference>UiPath.CV.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Workflow</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Lacerte_ExportValidation" sap:VirtualizedContainerService.HintSize="796.8,5052.8" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Lacerte_ExportValidation" sap:VirtualizedContainerService.HintSize="846.4,5617.6" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="734.4,56.8" sap2010:WorkflowViewState.IdRef="CommentOut_4">
+    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="784,56.8" sap2010:WorkflowViewState.IdRef="CommentOut_4">
       <ui:CommentOut.Body>
         <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="416,256" sap2010:WorkflowViewState.IdRef="Sequence_18">
           <sap:WorkflowViewStateService.ViewState>
@@ -165,7 +166,7 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:CommentOut>
-    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="734.4,56.8" sap2010:WorkflowViewState.IdRef="CommentOut_5">
+    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="784,56.8" sap2010:WorkflowViewState.IdRef="CommentOut_5">
       <ui:CommentOut.Body>
         <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="416,255.2" sap2010:WorkflowViewState.IdRef="Sequence_19">
           <sap:WorkflowViewStateService.ViewState>
@@ -183,9 +184,9 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:CommentOut>
-    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="734.4,174.4" sap2010:WorkflowViewState.IdRef="LogMessage_1" Message="[&quot;Login to the Lacerte Tax Software &quot;]" />
-    <t:TaxSoftwareLogin sap:VirtualizedContainerService.HintSize="734.4,278.4" sap2010:WorkflowViewState.IdRef="TaxSoftwareLogin_1" in_Config="[in_Config]" in_RunSearchClientId="No" in_TaxSoftware="[in_TransactionItem.SpecificContent(&quot;TaxSoftware&quot;).ToString]" in_TransactionItem="[in_TransactionItem]" />
-    <TryCatch sap2010:Annotation.AnnotationText="Steps to create a clone of Master client" DisplayName="Try Catch - Lacerte Cloning Master Client" sap:VirtualizedContainerService.HintSize="734.4,4240" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="784,174.4" sap2010:WorkflowViewState.IdRef="LogMessage_1" Message="[&quot;Login to the Lacerte Tax Software &quot;]" />
+    <t:TaxSoftwareLogin sap:VirtualizedContainerService.HintSize="784,278.4" sap2010:WorkflowViewState.IdRef="TaxSoftwareLogin_1" in_Config="[in_Config]" in_RunSearchClientId="No" in_TaxSoftware="[in_TransactionItem.SpecificContent(&quot;TaxSoftware&quot;).ToString]" in_TransactionItem="[in_TransactionItem]" />
+    <TryCatch sap2010:Annotation.AnnotationText="Steps to create a clone of Master client" DisplayName="Try Catch - Lacerte Cloning Master Client" sap:VirtualizedContainerService.HintSize="784,4804.8" sap2010:WorkflowViewState.IdRef="TryCatch_1">
       <TryCatch.Variables>
         <Variable x:TypeArguments="x:Boolean" Name="boolDuplicateClient" />
         <Variable x:TypeArguments="x:Boolean" Name="bool_FindClient" />
@@ -198,7 +199,7 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
       <TryCatch.Try>
-        <Sequence DisplayName="Sequence Lacerte clonning master client" sap:VirtualizedContainerService.HintSize="697.6,3945.6" sap2010:WorkflowViewState.IdRef="Sequence_2">
+        <Sequence DisplayName="Sequence Lacerte clonning master client" sap:VirtualizedContainerService.HintSize="747.2,4510.4" sap2010:WorkflowViewState.IdRef="Sequence_2">
           <Sequence.Variables>
             <Variable x:TypeArguments="x:String" Name="strApplicationPath" />
             <Variable x:TypeArguments="x:String" Name="strMasterTaxClient" />
@@ -216,7 +217,7 @@
               <x:Boolean x:Key="IsPinned">False</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <ui:MultipleAssign sap2010:Annotation.AnnotationText="Assigning multiple variables from the input" DisplayName="Assign Multiple Variables" sap:VirtualizedContainerService.HintSize="635.2,430.4" sap2010:WorkflowViewState.IdRef="MultipleAssign_1">
+          <ui:MultipleAssign sap2010:Annotation.AnnotationText="Assigning multiple variables from the input" DisplayName="Assign Multiple Variables" sap:VirtualizedContainerService.HintSize="684.8,430.4" sap2010:WorkflowViewState.IdRef="MultipleAssign_1">
             <ui:MultipleAssign.AssignOperations>
               <scg:List x:TypeArguments="ui:AssignOperation" Capacity="16">
                 <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_1">
@@ -301,20 +302,20 @@
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
           </ui:MultipleAssign>
-          <Delay Duration="00:00:20" sap:VirtualizedContainerService.HintSize="635.2,122.4" sap2010:WorkflowViewState.IdRef="Delay_1" />
-          <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Application: 2024 Lacerte Clone Return" sap:VirtualizedContainerService.HintSize="635.2,3304" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" ScopeGuid="5e5d4922-e5ea-4b8b-9f64-ec46d6c48ee6" Version="V2">
+          <Delay Duration="00:00:20" sap:VirtualizedContainerService.HintSize="684.8,122.4" sap2010:WorkflowViewState.IdRef="Delay_1" />
+          <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Application: 2024 Lacerte Clone Return" sap:VirtualizedContainerService.HintSize="684.8,3868.8" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" ScopeGuid="5e5d4922-e5ea-4b8b-9f64-ec46d6c48ee6" Version="V2">
             <uix:NApplicationCard.Body>
               <ActivityAction x:TypeArguments="x:Object">
                 <ActivityAction.Argument>
                   <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
                 </ActivityAction.Argument>
-                <Sequence DisplayName="Do - Lacerte Process" sap:VirtualizedContainerService.HintSize="601.6,2989.6" sap2010:WorkflowViewState.IdRef="Sequence_15">
+                <Sequence DisplayName="Do - Lacerte Process" sap:VirtualizedContainerService.HintSize="651.2,3554.4" sap2010:WorkflowViewState.IdRef="Sequence_15">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <ui:Activate DelayBefore="{x:Null}" DelayMS="{x:Null}" DisplayName="Activate a UI element by ID" sap:VirtualizedContainerService.HintSize="539.2,56.8" sap2010:WorkflowViewState.IdRef="Activate_1">
+                  <ui:Activate DelayBefore="{x:Null}" DelayMS="{x:Null}" DisplayName="Activate a UI element by ID" sap:VirtualizedContainerService.HintSize="588.8,56.8" sap2010:WorkflowViewState.IdRef="Activate_1">
                     <ui:Activate.Target>
                       <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" Id="695db0b3-f65a-4265-a957-c4f8736e8820">
                         <ui:Target.TimeoutMS>
@@ -332,7 +333,7 @@
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
                   </ui:Activate>
-                  <ui:RetryScope sap2010:Annotation.AnnotationText="Nevigate to the Home tab" DisplayName="Retry keyboard shortcuts and check element existence" sap:VirtualizedContainerService.HintSize="539.2,88" sap2010:WorkflowViewState.IdRef="RetryScope_1" NumberOfRetries="4" RetryInterval="00:00:04">
+                  <ui:RetryScope sap2010:Annotation.AnnotationText="Nevigate to the Home tab" DisplayName="Retry keyboard shortcuts and check element existence" sap:VirtualizedContainerService.HintSize="588.8,88" sap2010:WorkflowViewState.IdRef="RetryScope_1" NumberOfRetries="4" RetryInterval="00:00:04">
                     <ui:RetryScope.ActivityBody>
                       <ActivityAction>
                         <uix:NKeyboardShortcuts ActivateBefore="True" ClickBeforeMode="None" DelayAfter="2" DelayBefore="2" DisplayName="Execute keyboard shortcuts for application interaction" sap:VirtualizedContainerService.HintSize="333.6,199.2" sap2010:WorkflowViewState.IdRef="NKeyboardShortcuts_1" ScopeIdentifier="5e5d4922-e5ea-4b8b-9f64-ec46d6c48ee6" Shortcuts="[d(hk)][d(alt)]c[u(alt)][u(hk)]" Version="V3">
@@ -372,7 +373,7 @@
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
                   </ui:RetryScope>
-                  <ui:LogMessage DisplayName="Log message for navigating to Individual" sap:VirtualizedContainerService.HintSize="539.2,176" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;Navigate to Individual&quot;]">
+                  <ui:LogMessage DisplayName="Log message for navigating to Individual" sap:VirtualizedContainerService.HintSize="588.8,176" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;Navigate to Individual&quot;]">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -380,7 +381,7 @@
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
                   </ui:LogMessage>
-                  <ui:CommentOut sap2010:Annotation.AnnotationText="Disabled for Sagar's keyboard issue" DisplayName="Comment Out - " sap:VirtualizedContainerService.HintSize="539.2,100.8" sap2010:WorkflowViewState.IdRef="CommentOut_1">
+                  <ui:CommentOut sap2010:Annotation.AnnotationText="Disabled for Sagar's keyboard issue" DisplayName="Comment Out - " sap:VirtualizedContainerService.HintSize="588.8,100.8" sap2010:WorkflowViewState.IdRef="CommentOut_1">
                     <ui:CommentOut.Body>
                       <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="416,180.8" sap2010:WorkflowViewState.IdRef="Sequence_3">
                         <sap:WorkflowViewStateService.ViewState>
@@ -422,7 +423,7 @@
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
                   </ui:CommentOut>
-                  <ui:RetryScope sap2010:Annotation.AnnotationText="Client window opening" DisplayName="Retry Scope -Client window" sap:VirtualizedContainerService.HintSize="539.2,88" sap2010:WorkflowViewState.IdRef="RetryScope_3" NumberOfRetries="3" RetryInterval="00:00:04">
+                  <ui:RetryScope sap2010:Annotation.AnnotationText="Client window opening" DisplayName="Retry Scope -Client window" sap:VirtualizedContainerService.HintSize="588.8,88" sap2010:WorkflowViewState.IdRef="RetryScope_3" NumberOfRetries="3" RetryInterval="00:00:04">
                     <ui:RetryScope.ActivityBody>
                       <ActivityAction>
                         <uix:NKeyboardShortcuts ActivateBefore="True" ClickBeforeMode="None" DisplayName="Execute keyboard shortcuts with UI automation" sap:VirtualizedContainerService.HintSize="336.8,178.4" sap2010:WorkflowViewState.IdRef="NKeyboardShortcuts_3" Shortcuts="[d(hk)][d(ctrl)]i[u(ctrl)][u(hk)]" Version="V3" />
@@ -452,15 +453,15 @@
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
                   </ui:RetryScope>
-                  <uix:NCheckState sap2010:Annotation.AnnotationText="Search the master client and creating clone " DisplayName="Check App State 'client'" EnableIfNotExists="False" sap:VirtualizedContainerService.HintSize="539.2,2389.6" sap2010:WorkflowViewState.IdRef="NCheckState_1" ScopeIdentifier="5e5d4922-e5ea-4b8b-9f64-ec46d6c48ee6" Version="V3">
+                  <uix:NCheckState sap2010:Annotation.AnnotationText="Search the master client and creating clone " DisplayName="Check App State 'client'" EnableIfNotExists="False" sap:VirtualizedContainerService.HintSize="588.8,2954.4" sap2010:WorkflowViewState.IdRef="NCheckState_1" ScopeIdentifier="5e5d4922-e5ea-4b8b-9f64-ec46d6c48ee6" Version="V3">
                     <uix:NCheckState.IfExists>
-                      <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="496,2115.2" sap2010:WorkflowViewState.IdRef="Sequence_4">
+                      <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="545.6,2680" sap2010:WorkflowViewState.IdRef="Sequence_4">
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                           </scg:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
-                        <ui:LogMessage DisplayName="Log Message - Appear" sap:VirtualizedContainerService.HintSize="433.6,56.8" sap2010:WorkflowViewState.IdRef="LogMessage_15" Message="[&quot;Find Client window appear.&quot;]">
+                        <ui:LogMessage DisplayName="Log Message - Appear" sap:VirtualizedContainerService.HintSize="483.2,56.8" sap2010:WorkflowViewState.IdRef="LogMessage_15" Message="[&quot;Find Client window appear.&quot;]">
                           <sap:WorkflowViewStateService.ViewState>
                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                               <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -468,7 +469,7 @@
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
                         </ui:LogMessage>
-                        <ui:Check AlterIfDisabled="{x:Null}" ContinueOnError="{x:Null}" DelayAfter="{x:Null}" DelayBefore="{x:Null}" Action="Check" DisplayName="Check 'TGroupButton'" sap:VirtualizedContainerService.HintSize="433.6,139.2" sap2010:WorkflowViewState.IdRef="Check_1">
+                        <ui:Check AlterIfDisabled="{x:Null}" ContinueOnError="{x:Null}" DelayAfter="{x:Null}" DelayBefore="{x:Null}" Action="Check" DisplayName="Check 'TGroupButton'" sap:VirtualizedContainerService.HintSize="483.2,139.2" sap2010:WorkflowViewState.IdRef="Check_1">
                           <ui:Check.Target>
                             <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="066fb892-1e3d-4e82-814f-8251f396a2e8" InformativeScreenshot="901717080551947f91246ec6d57d5c37" Selector="&lt;wnd app='w24tax.exe' cls='TfDlgFind' title='Find Client' /&gt;&lt;wnd cls='TRadioGroup' title=' Search By ' /&gt;&lt;wnd aaname='Client Number' cls='TGroupButton' title='C&amp;amp;lient Number' /&gt;">
                               <ui:Target.TimeoutMS>
@@ -486,12 +487,12 @@
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
                         </ui:Check>
-                        <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DelayAfter="3" DelayBefore="3" DisplayName="Type Into 'TLSCMaskEdit'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="433.6,250.4" sap2010:WorkflowViewState.IdRef="NTypeInto_1" ScopeIdentifier="5e5d4922-e5ea-4b8b-9f64-ec46d6c48ee6" Text="[in_TransactionItem.SpecificContent(&quot;ClientID&quot;).ToString + &quot;[k(Enter)]&quot;]" Version="V3">
+                        <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DelayAfter="3" DelayBefore="3" DisplayName="Type Into 'TLSCMaskEdit'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="483.2,250.4" sap2010:WorkflowViewState.IdRef="NTypeInto_1" ScopeIdentifier="5e5d4922-e5ea-4b8b-9f64-ec46d6c48ee6" Text="[in_TransactionItem.SpecificContent(&quot;ClientID&quot;).ToString + &quot;[k(Enter)]&quot;]" Version="V3">
                           <uix:NTypeInto.Target>
                             <uix:TargetAnchorable CVScreenId="c4fbfc4b-e025-4da2-a275-86187ba4cb1d" CvElementArea="24, 191, 171, 27" CvType="InputBox" DesignTimeRectangle="24, 192, 171, 26" DesignTimeScaleFactor="1.25" FullSelectorArgument="&lt;wnd cls='TGroupBox' title=' Client Number ' /&gt;&lt;wnd cls='TLSCMaskEdit' /&gt;" FuzzySelectorArgument="&lt;wnd cls='TGroupBox' title=' Client Number ' /&gt;&lt;wnd cls='TLSCMaskEdit' /&gt;" Guid="82ba2e8e-e773-429a-80d4-1d0925312994" InformativeScreenshot="ea166e9b75c952197dd709528716eaff.png" ScopeSelectorArgument="&lt;wnd app='*tax.exe' cls='TfDlgFind' title='Find Client' /&gt;" SearchSteps="Selector, FuzzySelector, CV" Version="V2" Visibility="Interactive" />
                           </uix:NTypeInto.Target>
                         </uix:NTypeInto>
-                        <uix:NKeyboardShortcuts ActivateBefore="True" ClickBeforeMode="None" DisplayName="Keyboard Shortcuts" sap:VirtualizedContainerService.HintSize="433.6,246.4" sap2010:WorkflowViewState.IdRef="NKeyboardShortcuts_8" Shortcuts="[d(hk)][k(enter)][u(hk)]" Version="V4">
+                        <uix:NKeyboardShortcuts ActivateBefore="True" ClickBeforeMode="None" DisplayName="Keyboard Shortcuts" sap:VirtualizedContainerService.HintSize="483.2,246.4" sap2010:WorkflowViewState.IdRef="NKeyboardShortcuts_8" Shortcuts="[d(hk)][k(enter)][u(hk)]" Version="V4">
                           <uix:NKeyboardShortcuts.VerifyOptions>
                             <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
                               <uix:VerifyExecutionOptions.Retry>
@@ -503,7 +504,7 @@
                             </uix:VerifyExecutionOptions>
                           </uix:NKeyboardShortcuts.VerifyOptions>
                         </uix:NKeyboardShortcuts>
-                        <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Payments &amp; Penalties'" sap:VirtualizedContainerService.HintSize="433.6,225.6" sap2010:WorkflowViewState.IdRef="NClick_7" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="5e5d4922-e5ea-4b8b-9f64-ec46d6c48ee6" Version="V4">
+                        <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Payments &amp; Penalties'" sap:VirtualizedContainerService.HintSize="483.2,225.6" sap2010:WorkflowViewState.IdRef="NClick_7" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="5e5d4922-e5ea-4b8b-9f64-ec46d6c48ee6" Version="V4">
                           <uix:NClick.Target>
                             <uix:TargetAnchorable CVScreenId="01ef0046-b739-4ba7-b089-2979ba5d7d0e" CvElementArea="78, 164, 151, 31" CvTextArea="87, 172, 128, 17" CvTextArgument="Payments &amp; Penalties" CvType="Button" DesignTimeRectangle="78, 164, 151, 31" DesignTimeScaleFactor="1.25" ElementType="Button" Guid="824bf96e-e7ce-4a0d-bfac-c819c5f906fd" InformativeScreenshot="c4d8aab694f8ed792258554fb0467879.png" ScopeSelectorArgument="&lt;wnd app='w24tax.exe' cls='TfrmMain' title='2024 Lacerte Individual Tax - LLAB6633 - JACK AND JILL ANDERSON' /&gt;" SearchSteps="CV" TargetType="ComputerVisionBased" Version="V4" Visibility="Interactive" />
                           </uix:NClick.Target>
@@ -518,7 +519,7 @@
                             </uix:VerifyExecutionOptions>
                           </uix:NClick.VerifyOptions>
                         </uix:NClick>
-                        <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click '6 2024 Estimated Tax Pa…'" sap:VirtualizedContainerService.HintSize="433.6,225.6" sap2010:WorkflowViewState.IdRef="NClick_8" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="5e5d4922-e5ea-4b8b-9f64-ec46d6c48ee6" Version="V4">
+                        <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click '6 2024 Estimated Tax Pa…'" sap:VirtualizedContainerService.HintSize="483.2,225.6" sap2010:WorkflowViewState.IdRef="NClick_8" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="5e5d4922-e5ea-4b8b-9f64-ec46d6c48ee6" Version="V4">
                           <uix:NClick.Target>
                             <uix:TargetAnchorable CVScreenId="95d6670b-7bf6-4e99-8228-e3e3cedf888c" CvTextArea="13, 6, 195, 17" CvTextArgument="6 2024 Estimated Tax Payments" CvType="Text" DesignTimeRectangle="13, 6, 195, 17" DesignTimeScaleFactor="1.25" ElementType="Text" Guid="68d87eb1-4f47-47d9-a96b-5fe0acc2c590" InformativeScreenshot="23bcb6bc7320b4f984b9abd38900edcd.png" ScopeSelectorArgument="&lt;wnd app='w24tax.exe' cls='THotPopupMenu' idx='*' /&gt;" SearchSteps="CV" TargetType="ComputerVisionBased" Version="V4" Visibility="Interactive" />
                           </uix:NClick.Target>
@@ -533,7 +534,7 @@
                             </uix:VerifyExecutionOptions>
                           </uix:NClick.VerifyOptions>
                         </uix:NClick>
-                        <p:CVScope ContinueOnError="{x:Null}" DelayBefore="{x:Null}" ScopeId="{x:Null}" ScrollOffset="{x:Null}" Server="{x:Null}" CvMethod="ElementDetection, OCR" DesignTimeCacheId="7e3f717b-57fe-4ad3-9d50-8cb335937ca6" DisplayName="CV Screen Scope 'TOSISection'" sap:VirtualizedContainerService.HintSize="433.6,712" sap2010:WorkflowViewState.IdRef="CVScope_1" SendOnPremData="False" Version="V6">
+                        <p:CVScope ContinueOnError="{x:Null}" DelayBefore="{x:Null}" ScopeId="{x:Null}" ScrollOffset="{x:Null}" Server="{x:Null}" CvMethod="ElementDetection, OCR" DesignTimeCacheId="7e3f717b-57fe-4ad3-9d50-8cb335937ca6" DisplayName="CV Screen Scope 'TOSISection'" sap:VirtualizedContainerService.HintSize="483.2,1276.8" sap2010:WorkflowViewState.IdRef="CVScope_1" SendOnPremData="False" Version="V6">
                           <p:CVScope.Body>
                             <ActivityAction x:TypeArguments="x:Object">
                               <ActivityAction.Argument>
@@ -543,7 +544,7 @@
                                 <Sequence.Variables>
                                   <Variable x:TypeArguments="x:String" Name="AmountPaid" />
                                 </Sequence.Variables>
-                                <p:CvGetTextWithDescriptor DelayScreenshotAfterScroll="{x:Null}" ScrollOffset="{x:Null}" Descriptor="[&quot;Target: InputBox (397,164,107,20)&quot; +&#xD;&#xA;&quot;Anchor: Text 'Amount paid.' (37,168,62,12)&quot; +&#xD;&#xA;&quot;Anchor: Text 'Voucher amount (memo)' (36,146,120,12)&quot; +&#xD;&#xA;&quot;Anchor: Icon (504,167,14,15)&quot;]" DesignTimeCacheId="169bbd0a-cbfe-4b18-a8a3-d3736b3002c4" DesignTimeScaleFactor="1.25" DisplayName="CV Get Text - InputBox" sap:VirtualizedContainerService.HintSize="400,253.6" sap2010:WorkflowViewState.IdRef="CvGetTextWithDescriptor_1" InformativeScreenshot="bfb483ce3efde24cb838d5cac0c1a2bb" NumberOfScrolls="2" RefreshBefore="True" Result="[AmountPaid]" ScrollDirection="None" Version="V6">
+                                <p:CvGetTextWithDescriptor DelayScreenshotAfterScroll="{x:Null}" ScrollOffset="{x:Null}" ContinueOnError="True" Descriptor="[&quot;Target: InputBox (397,164,107,20)&quot; +&#xA;&quot;Anchor: Text 'Amount paid.' (37,168,62,12)&quot; +&#xA;&quot;Anchor: Text 'Voucher amount (memo)' (36,146,120,12)&quot; +&#xA;&quot;Anchor: Icon (504,167,14,15)&quot;]" DesignTimeCacheId="169bbd0a-cbfe-4b18-a8a3-d3736b3002c4" DesignTimeScaleFactor="1.25" DisplayName="CV Get Text - InputBox" sap:VirtualizedContainerService.HintSize="449.6,253.6" sap2010:WorkflowViewState.IdRef="CvGetTextWithDescriptor_1" InformativeScreenshot="bfb483ce3efde24cb838d5cac0c1a2bb" NumberOfScrolls="2" RefreshBefore="True" Result="[AmountPaid]" ScrollDirection="None" Version="V6">
                                   <p:CvGetTextWithDescriptor.DesignTimeDescriptor>
                                     <uc:CvDescriptor Id="3949898f-dbff-4e7e-b480-f6c79fda9845">
                                       <uc:CvDescriptor.Anchors>
@@ -559,7 +560,28 @@
                                     </uc:CvDescriptor>
                                   </p:CvGetTextWithDescriptor.DesignTimeDescriptor>
                                 </p:CvGetTextWithDescriptor>
-                                <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="400,108.8" sap2010:WorkflowViewState.IdRef="MessageBox_1" Text="[AmountPaid]" />
+                                <If Condition="[Not String.IsNullOrEmpty(AmountPaid)]" sap:VirtualizedContainerService.HintSize="449.6,673.6" sap2010:WorkflowViewState.IdRef="If_1">
+                                  <If.Then>
+                                    <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="416,256" sap2010:WorkflowViewState.IdRef="Sequence_20">
+                                      <sap:WorkflowViewStateService.ViewState>
+                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                        </scg:Dictionary>
+                                      </sap:WorkflowViewStateService.ViewState>
+                                      <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="353.6,167.2" sap2010:WorkflowViewState.IdRef="LogMessage_17" Level="Info" Message="[&quot;The value from SPBinder and Tax Software is matched &quot;+&quot;=&quot;+AmountPaid]" />
+                                    </Sequence>
+                                  </If.Then>
+                                  <If.Else>
+                                    <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="416,256" sap2010:WorkflowViewState.IdRef="Sequence_21">
+                                      <sap:WorkflowViewStateService.ViewState>
+                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                        </scg:Dictionary>
+                                      </sap:WorkflowViewStateService.ViewState>
+                                      <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="353.6,167.2" sap2010:WorkflowViewState.IdRef="LogMessage_18" Level="Info" Message="[&quot;The value from SPBinder and Tax Software is not matched &quot;]" />
+                                    </Sequence>
+                                  </If.Else>
+                                </If>
                               </Sequence>
                             </ActivityAction>
                           </p:CVScope.Body>
@@ -2082,7 +2104,7 @@
                             <InArgument x:TypeArguments="x:Boolean" />
                           </p:CVScope.UseLocalServer>
                         </p:CVScope>
-                        <ui:LogMessage DisplayName="Log message for master client ID" sap:VirtualizedContainerService.HintSize="433.6,168.8" sap2010:WorkflowViewState.IdRef="LogMessage_16" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;The master client id is -&quot;+strMasterTaxClient]">
+                        <ui:LogMessage DisplayName="Log message for master client ID" sap:VirtualizedContainerService.HintSize="483.2,168.8" sap2010:WorkflowViewState.IdRef="LogMessage_16" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;The master client id is -&quot;+strMasterTaxClient]">
                           <sap:WorkflowViewStateService.ViewState>
                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
