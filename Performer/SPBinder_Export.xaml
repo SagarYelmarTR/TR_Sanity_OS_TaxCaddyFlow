@@ -8,11 +8,12 @@
     <x:Property Name="in_dtInputData" Type="InArgument(sd:DataTable)" />
     <x:Property Name="in_drRowToUpdate" Type="InArgument(sd:DataRow)" />
     <x:Property sap2010:Annotation.AnnotationText="Transaction item to be processed." Name="in_TransactionItem" Type="InArgument(ui:QueueItem)" />
+    <x:Property Name="in_strComponentSummaryRange" Type="InArgument(x:String)" />
   </x:Members>
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1408.8,6167.2</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1408.8,1098.4</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ExportToTaxSoftware_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -140,7 +141,7 @@
       <AssemblyReference>System.Memory.Data</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="SPBinder_Export" sap:VirtualizedContainerService.HintSize="1398.4,6102.4" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="SPBinder_Export" sap:VirtualizedContainerService.HintSize="595.2,1033.6" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="strScreenshotPath" />
       <Variable x:TypeArguments="x:String" Default="SPBinder_Export" Name="strSubComponent" />
@@ -153,7 +154,7 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <TryCatch DisplayName="Try Catch - SPBinder_ExportData" sap:VirtualizedContainerService.HintSize="1336,6013.6" sap2010:WorkflowViewState.IdRef="TryCatch_3">
+    <TryCatch DisplayName="Try Catch - SPBinder_ExportData" sap:VirtualizedContainerService.HintSize="532.8,944.8" sap2010:WorkflowViewState.IdRef="TryCatch_3">
       <TryCatch.Variables>
         <Variable x:TypeArguments="x:String" Default="SPBinder_Export" Name="strFlowName" />
       </TryCatch.Variables>
@@ -645,7 +646,7 @@
                           <InArgument x:TypeArguments="x:Object">[DateTime.Now.ToLocalTime.Subtract(dtStartTime).ToString.Split("."c)(0)]</InArgument>
                         </Assign.Value>
                       </Assign>
-                      <ui:WriteRange WorkbookPathResource="{x:Null}" AddHeaders="True" DataTable="[in_dtReporter]" DisplayName="Write Range Workbook" sap:VirtualizedContainerService.HintSize="638.4,148" sap2010:WorkflowViewState.IdRef="WriteRange_8" SheetName="[in_Config(&quot;SanityReport_SummaryReportsheetName&quot;).ToString]" StartingCell="[in_Config(&quot;ComponentSummaryRange&quot;).ToString]" WorkbookPath="[in_Config(&quot;SanityReport_ReportPath&quot;).ToString.Split(&quot;.xlsx&quot;)(0)+&quot;_&quot;+in_drRowToUpdate(&quot;ExpectedBinderID&quot;).ToString.Trim+&quot;.xlsx&quot;]" />
+                      <ui:WriteRange WorkbookPathResource="{x:Null}" AddHeaders="True" DataTable="[in_dtReporter]" DisplayName="Write Range Workbook" sap:VirtualizedContainerService.HintSize="638.4,148" sap2010:WorkflowViewState.IdRef="WriteRange_8" SheetName="[in_Config(&quot;SanityReport_SummaryReportsheetName&quot;).ToString]" StartingCell="[in_strComponentSummaryRange]" WorkbookPath="[in_Config(&quot;SanityReport_ReportPath&quot;).ToString.Split(&quot;.xlsx&quot;)(0)+&quot;_&quot;+in_drRowToUpdate(&quot;ExpectedBinderID&quot;).ToString.Trim+&quot;.xlsx&quot;]" />
                       <ui:WriteCell WorkbookPathResource="{x:Null}" sap2010:Annotation.AnnotationText="query processes the &quot;Application Wait Time&quot; column from each row in the in_dtReporter DataTable, sums up all the valid time intervals, and returns the total duration as a string." Cell="[in_Config(&quot;TotalApplicationWaitTime&quot;).ToString]" DisplayName="Application Wait Time" sap:VirtualizedContainerService.HintSize="638.4,216.8" sap2010:WorkflowViewState.IdRef="WriteCell_2" SheetName="[in_Config(&quot;SanityReport_SummaryReportsheetName&quot;).ToString]" Text="[((From row In in_dtReporter.AsEnumerable()Let intervalString = row.Field(Of String)(&quot;Application Wait Time&quot;)Where Not String.IsNullOrEmpty(intervalString)Let interval = TimeSpan.Parse(intervalString)Select interval).Aggregate(Function(ts1, ts2) ts1.Add(ts2))).ToString]" WorkbookPath="[in_Config(&quot;SanityReport_ReportPath&quot;).ToString.Split(&quot;.xlsx&quot;)(0)+&quot;_&quot;+in_drRowToUpdate(&quot;ExpectedBinderID&quot;).ToString.Trim+&quot;.xlsx&quot;]">
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -761,7 +762,7 @@
         </uix:NApplicationCard>
       </TryCatch.Try>
       <TryCatch.Catches>
-        <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="1302.4,23.2" sap2010:WorkflowViewState.IdRef="Catch`1_2">
+        <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="499.2,23.2" sap2010:WorkflowViewState.IdRef="Catch`1_2">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -772,7 +773,7 @@
             <ActivityAction.Argument>
               <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
             </ActivityAction.Argument>
-            <Sequence DisplayName="Catch Export Data" sap:VirtualizedContainerService.HintSize="540.8,1234.4" sap2010:WorkflowViewState.IdRef="Sequence_11">
+            <Sequence DisplayName="Catch Export Data" sap:VirtualizedContainerService.HintSize="540.8,1306.4" sap2010:WorkflowViewState.IdRef="Sequence_11">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -856,16 +857,16 @@
         </Catch>
       </TryCatch.Catches>
       <TryCatch.Finally>
-        <Sequence DisplayName="Finally" sap:VirtualizedContainerService.HintSize="1036.8,661.6" sap2010:WorkflowViewState.IdRef="Sequence_12">
+        <Sequence DisplayName="Finally" sap:VirtualizedContainerService.HintSize="496,690.4" sap2010:WorkflowViewState.IdRef="Sequence_12">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               <x:Boolean x:Key="IsPinned">False</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <ui:LogMessage DisplayName="Log Message - Component RunTime" sap:VirtualizedContainerService.HintSize="1003.2,174.4" sap2010:WorkflowViewState.IdRef="LogMessage_15" Message="[strFlowName+&quot; Run Time - &quot; + DateTime.Now.ToLocalTime.Subtract(dtStartTime).ToString.Split(&quot;.&quot;c)(0)]" />
-          <ui:LogMessage DisplayName="Log Message - Execution Ended" sap:VirtualizedContainerService.HintSize="1003.2,174.4" sap2010:WorkflowViewState.IdRef="LogMessage_16" Message="[&quot;************************************************************************&quot;+strFlowName+&quot; Ended************************************************************************&quot;]" />
-          <Assign DisplayName="Assign - Execution Time" sap:VirtualizedContainerService.HintSize="1003.2,113.6" sap2010:WorkflowViewState.IdRef="Assign_4">
+          <ui:LogMessage DisplayName="Log Message - Component RunTime" sap:VirtualizedContainerService.HintSize="433.6,174.4" sap2010:WorkflowViewState.IdRef="LogMessage_15" Message="[strFlowName+&quot; Run Time - &quot; + DateTime.Now.ToLocalTime.Subtract(dtStartTime).ToString.Split(&quot;.&quot;c)(0)]" />
+          <ui:LogMessage DisplayName="Log Message - Execution Ended" sap:VirtualizedContainerService.HintSize="433.6,174.4" sap2010:WorkflowViewState.IdRef="LogMessage_16" Message="[&quot;************************************************************************&quot;+strFlowName+&quot; Ended************************************************************************&quot;]" />
+          <Assign DisplayName="Assign - Execution Time" sap:VirtualizedContainerService.HintSize="433.6,113.6" sap2010:WorkflowViewState.IdRef="Assign_4">
             <Assign.To>
               <OutArgument x:TypeArguments="x:Object">[in_dtReporter(intComponentRowIndex)("Automation Time")]</OutArgument>
             </Assign.To>
@@ -873,7 +874,7 @@
               <InArgument x:TypeArguments="x:Object">[DateTime.Now.ToLocalTime.Subtract(dtStartTime).ToString.Split("."c)(0)]</InArgument>
             </Assign.Value>
           </Assign>
-          <ui:WriteRange WorkbookPathResource="{x:Null}" AddHeaders="True" DataTable="[in_dtReporter]" DisplayName="Write Range Workbook" sap:VirtualizedContainerService.HintSize="1003.2,139.2" sap2010:WorkflowViewState.IdRef="WriteRange_7" SheetName="[in_Config(&quot;SanityReport_SummaryReportsheetName&quot;).ToString]" StartingCell="[in_Config(&quot;ComponentSummaryRange&quot;).ToString]" WorkbookPath="[in_Config(&quot;SanityReport_ReportPath&quot;).ToString.Split(&quot;.xlsx&quot;)(0)+&quot;_&quot;+strBinderID+&quot;.xlsx&quot;]" />
+          <ui:WriteRange WorkbookPathResource="{x:Null}" AddHeaders="True" DataTable="[in_dtReporter]" DisplayName="Write Range Workbook" sap:VirtualizedContainerService.HintSize="433.6,139.2" sap2010:WorkflowViewState.IdRef="WriteRange_7" SheetName="[in_Config(&quot;SanityReport_SummaryReportsheetName&quot;).ToString]" StartingCell="[in_strComponentSummaryRange]" WorkbookPath="[in_Config(&quot;SanityReport_ReportPath&quot;).ToString.Split(&quot;.xlsx&quot;)(0)+&quot;_&quot;+strBinderID+&quot;.xlsx&quot;]" />
         </Sequence>
       </TryCatch.Finally>
     </TryCatch>

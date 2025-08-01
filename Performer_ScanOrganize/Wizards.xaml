@@ -10,6 +10,7 @@
     <x:Property Name="in_dtInputData" Type="InArgument(sd:DataTable)" />
     <x:Property Name="in_strBinderID" Type="InArgument(x:String)" />
     <x:Property Name="io_TaxYear" Type="InArgument(x:String)" />
+    <x:Property Name="in_strComponentSummaryRange" Type="InArgument(x:String)" />
   </x:Members>
   <this:Wizards.io_TaxYear>
     <InArgument x:TypeArguments="x:String" />
@@ -169,6 +170,7 @@
       <AssemblyReference>System.Net.ServicePoint</AssemblyReference>
       <AssemblyReference>System.Net.WebHeaderCollection</AssemblyReference>
       <AssemblyReference>Fileroom_Login</AssemblyReference>
+      <AssemblyReference>System.Memory.Data</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
   <sap:WorkflowViewStateService.ViewState>
@@ -725,7 +727,7 @@
                     <InArgument x:TypeArguments="x:Object">[DateTime.Now.Subtract(dtStartTime).ToString]</InArgument>
                   </Assign.Value>
                 </Assign>
-                <ui:WriteRange WorkbookPathResource="{x:Null}" AddHeaders="True" DataTable="[in_dtReporter]" DisplayName="Write Range Workbook" sap:VirtualizedContainerService.HintSize="433.6,139.2" sap2010:WorkflowViewState.IdRef="WriteRange_6" SheetName="[in_Config(&quot;SanityReport_SummaryReportsheetName&quot;).ToString]" StartingCell="[in_Config(&quot;ComponentSummaryRange&quot;).ToString]" WorkbookPath="[in_Config(&quot;SanityReport_ReportPath&quot;).ToString.Split(&quot;.xlsx&quot;)(0)+&quot;_&quot;+in_drRowToUpdate(&quot;ExpectedBinderID&quot;).ToString.Trim+&quot;.xlsx&quot;]" />
+                <ui:WriteRange WorkbookPathResource="{x:Null}" AddHeaders="True" DataTable="[in_dtReporter]" DisplayName="Write Range Workbook" sap:VirtualizedContainerService.HintSize="433.6,139.2" sap2010:WorkflowViewState.IdRef="WriteRange_6" SheetName="[in_Config(&quot;SanityReport_SummaryReportsheetName&quot;).ToString]" StartingCell="[in_strComponentSummaryRange]" WorkbookPath="[in_Config(&quot;SanityReport_ReportPath&quot;).ToString.Split(&quot;.xlsx&quot;)(0)+&quot;_&quot;+in_drRowToUpdate(&quot;ExpectedBinderID&quot;).ToString.Trim+&quot;.xlsx&quot;]" />
               </Sequence>
             </TryCatch.Finally>
           </TryCatch>

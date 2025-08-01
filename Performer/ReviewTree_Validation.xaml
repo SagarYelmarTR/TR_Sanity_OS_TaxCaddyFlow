@@ -9,7 +9,9 @@
     <x:Property Name="in_drRowToUpdate" Type="InArgument(sd:DataRow)" />
     <x:Property Name="out_strExceptionMessage" Type="OutArgument(x:String)" />
     <x:Property Name="out_strProcessName" Type="OutArgument(x:String)" />
+    <x:Property Name="in_strComponentSummaryRange" Type="InArgument(x:String)" />
   </x:Members>
+  <sap:VirtualizedContainerService.HintSize>1408.8,2547.2</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -65,6 +67,7 @@
       <x:String>UiPath.Activities.System.Text</x:String>
       <x:String>System.Security</x:String>
       <x:String>System.Numerics</x:String>
+      <x:String>UiPath.UIAutomationNext.Models</x:String>
     </sco:Collection>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
@@ -152,18 +155,19 @@
       <AssemblyReference>System.Runtime.Numerics</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="ReviewTree_Validation" sap:VirtualizedContainerService.HintSize="1068,1397.6" sap2010:WorkflowViewState.IdRef="Sequence_27">
+  <Sequence DisplayName="ReviewTree_Validation" sap:VirtualizedContainerService.HintSize="736,2482.4" sap2010:WorkflowViewState.IdRef="Sequence_27">
     <Sequence.Variables>
       <Variable x:TypeArguments="s:DateTime" Name="dtStartTime" />
       <Variable x:TypeArguments="x:Int32" Default="13" Name="intComponentRowIndex" />
       <Variable x:TypeArguments="x:String" Name="strBinderID" />
+      <Variable x:TypeArguments="x:String" Name="in_FromTaxfilepath" />
     </Sequence.Variables>
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <Assign DisplayName="Assign - Process Name" sap:VirtualizedContainerService.HintSize="619.2,113.6" sap2010:WorkflowViewState.IdRef="Assign_4">
+    <Assign DisplayName="Assign - Process Name" sap:VirtualizedContainerService.HintSize="673.6,112.8" sap2010:WorkflowViewState.IdRef="Assign_4">
       <Assign.To>
         <OutArgument x:TypeArguments="x:String">[out_strProcessName]</OutArgument>
       </Assign.To>
@@ -171,7 +175,7 @@
         <InArgument x:TypeArguments="x:String">ReviewTree_Validation</InArgument>
       </Assign.Value>
     </Assign>
-    <If Condition="[Not in_TransactionItem.Progress.Contains(out_strProcessName+&quot; Success&quot;)]" DisplayName="If - ReviewTree_Validation is successfully run?" sap:VirtualizedContainerService.HintSize="619.2,1260.8" sap2010:WorkflowViewState.IdRef="If_1">
+    <If Condition="[Not in_TransactionItem.Progress.Contains(out_strProcessName+&quot; Success&quot;)]" DisplayName="If - ReviewTree_Validation is successfully run?" sap:VirtualizedContainerService.HintSize="673.6,2280.8" sap2010:WorkflowViewState.IdRef="If_1">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -179,13 +183,13 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
       <If.Then>
-        <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="585.6,873.6" sap2010:WorkflowViewState.IdRef="Sequence_31">
+        <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="640,1864.8" sap2010:WorkflowViewState.IdRef="Sequence_31">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <TryCatch DisplayName="Try Catch - ReviewTree_Validation" sap:VirtualizedContainerService.HintSize="552,813.6" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+          <TryCatch DisplayName="Try Catch - ReviewTree_Validation" sap:VirtualizedContainerService.HintSize="577.6,1776" sap2010:WorkflowViewState.IdRef="TryCatch_1">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -193,7 +197,7 @@
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
             <TryCatch.Try>
-              <Sequence DisplayName="Try Body - ReviewTree_Validation" sap:VirtualizedContainerService.HintSize="512,2071.2" sap2010:WorkflowViewState.IdRef="Sequence_28">
+              <Sequence DisplayName="Try Body - ReviewTree_Validation" sap:VirtualizedContainerService.HintSize="540.8,1521.6" sap2010:WorkflowViewState.IdRef="Sequence_28">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -223,22 +227,29 @@
                     </scg:List>
                   </ui:MultipleAssign.AssignOperations>
                 </ui:MultipleAssign>
-                <TryCatch sap2010:Annotation.AnnotationText="Retry in case of Failure" DisplayName="Try Catch - Sanity_ReviewTreeValidation" sap:VirtualizedContainerService.HintSize="478.4,537.6" sap2010:WorkflowViewState.IdRef="TryCatch_2">
+                <TryCatch sap2010:Annotation.AnnotationText="Retry in case of Failure" DisplayName="Try Catch - Sanity_ReviewTreeValidation" sap:VirtualizedContainerService.HintSize="478.4,540.8" sap2010:WorkflowViewState.IdRef="TryCatch_2">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
                   <TryCatch.Try>
-                    <s1:Sanity_ReviewTreeValidation DisplayName="Sanity_ReviewTreeValidation" sap:VirtualizedContainerService.HintSize="416,246.4" sap2010:WorkflowViewState.IdRef="Sanity_ReviewTreeValidation_1" in_Config="[in_Config]" in_TransactionItem="[in_TransactionItem]" in_dtTestSummaryReport="[in_dtTestSummaryReport]" in_strBinderID="[strBinderID]" />
+                    <s1:Sanity_ReviewTreeValidation DisplayName="Sanity_ReviewTreeValidation" sap:VirtualizedContainerService.HintSize="334.4,246.4" sap2010:WorkflowViewState.IdRef="Sanity_ReviewTreeValidation_1" in_Config="[in_Config]" in_TransactionItem="[in_TransactionItem]" in_dtTestSummaryReport="[in_dtTestSummaryReport]" in_strBinderID="[strBinderID]" />
                   </TryCatch.Try>
                   <TryCatch.Catches>
-                    <Catch x:TypeArguments="s:Exception" sap2010:WorkflowViewState.IdRef="Catch`1_2">
+                    <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="403.2,23.2" sap2010:WorkflowViewState.IdRef="Catch`1_2">
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
                       <ActivityAction x:TypeArguments="s:Exception">
                         <ActivityAction.Argument>
                           <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
                         </ActivityAction.Argument>
-                        <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="416,504" sap2010:WorkflowViewState.IdRef="Sequence_34">
+                        <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="444.8,532.8" sap2010:WorkflowViewState.IdRef="Sequence_34">
                           <sap:WorkflowViewStateService.ViewState>
                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -288,14 +299,14 @@
                   </sap:WorkflowViewStateService.ViewState>
                 </ui:MultipleAssign>
                 <ui:WriteRange StartingCell="{x:Null}" WorkbookPathResource="{x:Null}" AddHeaders="True" DataTable="[in_dtInputData]" DisplayName="Write Range Workbook" sap:VirtualizedContainerService.HintSize="478.4,148" sap2010:WorkflowViewState.IdRef="WriteRange_1" SheetName="[in_Config(&quot;SanityTest_InputFileSheetName&quot;).ToString]" WorkbookPath="[in_Config(&quot;SanityTest_InputFilePath&quot;).ToString]" />
-                <ui:SetTransactionProgress TimeoutMS="{x:Null}" DisplayName="Set Transaction Progress - ReviewTree_Validation" FolderPath="[in_Config(&quot;OrchestratorQueueFolder&quot;).ToString]" sap:VirtualizedContainerService.HintSize="478.4,217.6" sap2010:WorkflowViewState.IdRef="SetTransactionProgress_1" Progress="[out_strProcessName+&quot; Success&quot;]" TransactionItem="[in_TransactionItem]" />
+                <ui:SetTransactionProgress TimeoutMS="{x:Null}" DisplayName="Set Transaction Progress - ReviewTree_Validation" FolderPath="[in_Config(&quot;OrchestratorQueueFolder&quot;).ToString]" sap:VirtualizedContainerService.HintSize="478.4,165.6" sap2010:WorkflowViewState.IdRef="SetTransactionProgress_1" Progress="[out_strProcessName+&quot; Success&quot;]" TransactionItem="[in_TransactionItem]" />
               </Sequence>
             </TryCatch.Try>
             <TryCatch.Catches>
-              <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="518.4,626.4" sap2010:WorkflowViewState.IdRef="Catch`1_1">
+              <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="544,23.2" sap2010:WorkflowViewState.IdRef="Catch`1_1">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    <x:Boolean x:Key="IsExpanded">False</x:Boolean>
                     <x:Boolean x:Key="IsPinned">False</x:Boolean>
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
@@ -303,7 +314,7 @@
                   <ActivityAction.Argument>
                     <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
                   </ActivityAction.Argument>
-                  <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="512,555.2" sap2010:WorkflowViewState.IdRef="Sequence_29">
+                  <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="540.8,584" sap2010:WorkflowViewState.IdRef="Sequence_29">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -362,15 +373,15 @@
               </Catch>
             </TryCatch.Catches>
             <TryCatch.Finally>
-              <Sequence DisplayName="Finally" sap:VirtualizedContainerService.HintSize="512,661.6" sap2010:WorkflowViewState.IdRef="Sequence_30">
+              <Sequence DisplayName="Finally" sap:VirtualizedContainerService.HintSize="496,690.4" sap2010:WorkflowViewState.IdRef="Sequence_30">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
-                <ui:LogMessage DisplayName="Log Message - Component RunTime" sap:VirtualizedContainerService.HintSize="478.4,174.4" sap2010:WorkflowViewState.IdRef="LogMessage_2" Message="[out_strProcessName+&quot; Run Time - &quot; + DateTime.Now.ToLocalTime.Subtract(dtStartTime).ToString.Split(&quot;.&quot;c)(0)]" />
-                <ui:LogMessage DisplayName="Log Message - Execution Ended" sap:VirtualizedContainerService.HintSize="478.4,174.4" sap2010:WorkflowViewState.IdRef="LogMessage_3" Message="[&quot;************************************************************************&quot;+out_strProcessName+&quot; Ended************************************************************************&quot;]" />
-                <Assign DisplayName="Assign - Execution Time" sap:VirtualizedContainerService.HintSize="478.4,113.6" sap2010:WorkflowViewState.IdRef="Assign_3">
+                <ui:LogMessage DisplayName="Log Message - Component RunTime" sap:VirtualizedContainerService.HintSize="433.6,174.4" sap2010:WorkflowViewState.IdRef="LogMessage_2" Message="[out_strProcessName+&quot; Run Time - &quot; + DateTime.Now.ToLocalTime.Subtract(dtStartTime).ToString.Split(&quot;.&quot;c)(0)]" />
+                <ui:LogMessage DisplayName="Log Message - Execution Ended" sap:VirtualizedContainerService.HintSize="433.6,174.4" sap2010:WorkflowViewState.IdRef="LogMessage_3" Message="[&quot;************************************************************************&quot;+out_strProcessName+&quot; Ended************************************************************************&quot;]" />
+                <Assign DisplayName="Assign - Execution Time" sap:VirtualizedContainerService.HintSize="433.6,113.6" sap2010:WorkflowViewState.IdRef="Assign_3">
                   <Assign.To>
                     <OutArgument x:TypeArguments="x:Object">[in_dtReporter(intComponentRowIndex)("Automation Time")]</OutArgument>
                   </Assign.To>
@@ -378,20 +389,20 @@
                     <InArgument x:TypeArguments="x:Object">[DateTime.Now.ToLocalTime.Subtract(dtStartTime).ToString.Split("."c)(0)]</InArgument>
                   </Assign.Value>
                 </Assign>
-                <ui:WriteRange WorkbookPathResource="{x:Null}" AddHeaders="True" DataTable="[in_dtReporter]" DisplayName="Write Range Workbook" sap:VirtualizedContainerService.HintSize="478.4,139.2" sap2010:WorkflowViewState.IdRef="WriteRange_5" SheetName="[in_Config(&quot;SanityReport_SummaryReportsheetName&quot;).ToString]" StartingCell="[in_Config(&quot;ComponentSummaryRange&quot;).ToString]" WorkbookPath="[in_Config(&quot;SanityReport_ReportPath&quot;).ToString.Split(&quot;.xlsx&quot;)(0)+&quot;_&quot;+strBinderID+&quot;.xlsx&quot;]" />
+                <ui:WriteRange WorkbookPathResource="{x:Null}" AddHeaders="True" DataTable="[in_dtReporter]" DisplayName="Write Range Workbook" sap:VirtualizedContainerService.HintSize="433.6,139.2" sap2010:WorkflowViewState.IdRef="WriteRange_5" SheetName="[in_Config(&quot;SanityReport_SummaryReportsheetName&quot;).ToString]" StartingCell="[in_strComponentSummaryRange]" WorkbookPath="[in_Config(&quot;SanityReport_ReportPath&quot;).ToString.Split(&quot;.xlsx&quot;)(0)+&quot;_&quot;+strBinderID+&quot;.xlsx&quot;]" />
               </Sequence>
             </TryCatch.Finally>
           </TryCatch>
         </Sequence>
       </If.Then>
       <If.Else>
-        <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="547.2,225.6" sap2010:WorkflowViewState.IdRef="Sequence_32">
+        <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="416,254.4" sap2010:WorkflowViewState.IdRef="Sequence_32">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <ui:LogMessage DisplayName="Log Message - Already executed" sap:VirtualizedContainerService.HintSize="513.6,165.6" sap2010:WorkflowViewState.IdRef="LogMessage_4" Message="[out_strProcessName+&quot; is already executed.&quot;]" />
+          <ui:LogMessage DisplayName="Log Message - Already executed" sap:VirtualizedContainerService.HintSize="353.6,165.6" sap2010:WorkflowViewState.IdRef="LogMessage_4" Message="[out_strProcessName+&quot; is already executed.&quot;]" />
         </Sequence>
       </If.Else>
     </If>
