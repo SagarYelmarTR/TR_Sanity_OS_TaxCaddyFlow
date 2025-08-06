@@ -290,7 +290,7 @@
                                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                   <av:Point x:Key="ShapeLocation">600,400</av:Point>
                                   <av:Size x:Key="ShapeSize">60,60</av:Size>
-                                  <av:PointCollection x:Key="TrueConnector">660,430 770.2,430 770.2,515</av:PointCollection>
+                                  <av:PointCollection x:Key="TrueConnector">660,430 760.2,430 760.2,505</av:PointCollection>
                                   <x:String x:Key="TrueLabel">SCD</x:String>
                                   <x:String x:Key="FalseLabel">Fileroom</x:String>
                                   <av:PointCollection x:Key="FalseConnector">600,430 540.2,430 540.2,505</av:PointCollection>
@@ -300,7 +300,7 @@
                                 <FlowStep x:Name="__ReferenceID60" sap2010:WorkflowViewState.IdRef="FlowStep_1">
                                   <sap:WorkflowViewStateService.ViewState>
                                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                      <av:Point x:Key="ShapeLocation">715,515</av:Point>
+                                      <av:Point x:Key="ShapeLocation">705,505</av:Point>
                                       <av:Size x:Key="ShapeSize">110.4,70.4</av:Size>
                                     </scg:Dictionary>
                                   </sap:WorkflowViewStateService.ViewState>

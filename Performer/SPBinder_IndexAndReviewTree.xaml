@@ -11,7 +11,7 @@
     <x:Property Name="out_strExceptionMessage" Type="OutArgument(x:String)" />
     <x:Property Name="in_strComponentSummaryRange" Type="InArgument(x:String)" />
   </x:Members>
-  <sap:VirtualizedContainerService.HintSize>1408.8,1715.2</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1112.8,2093.6</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -154,7 +154,7 @@
       <AssemblyReference>SanityReport_ReadTemplate</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="SPBinder_IndexAndReviewTree" sap:VirtualizedContainerService.HintSize="691.2,1650.4" sap2010:WorkflowViewState.IdRef="Sequence_20">
+  <Sequence DisplayName="SPBinder_IndexAndReviewTree" sap:VirtualizedContainerService.HintSize="736,2028.8" sap2010:WorkflowViewState.IdRef="Sequence_20">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="strClientID" />
       <Variable x:TypeArguments="s:DateTime" Name="dtStartTime" />
@@ -166,7 +166,7 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <Assign DisplayName="Assign - Process Name" sap:VirtualizedContainerService.HintSize="628.8,113.6" sap2010:WorkflowViewState.IdRef="Assign_4">
+    <Assign DisplayName="Assign - Process Name" sap:VirtualizedContainerService.HintSize="673.6,113.6" sap2010:WorkflowViewState.IdRef="Assign_4">
       <Assign.To>
         <OutArgument x:TypeArguments="x:String">[out_strProcessName]</OutArgument>
       </Assign.To>
@@ -174,7 +174,7 @@
         <InArgument x:TypeArguments="x:String">SPBinder_IndexAndReviewTree</InArgument>
       </Assign.Value>
     </Assign>
-    <If Condition="[Not in_TransactionItem.Progress.Contains(out_strProcessName+&quot; Success&quot;)]" DisplayName="If - SPBinder_IndexAndReviewTree is successfully run?" sap:VirtualizedContainerService.HintSize="628.8,1448" sap2010:WorkflowViewState.IdRef="If_1">
+    <If Condition="[Not in_TransactionItem.Progress.Contains(out_strProcessName+&quot; Success&quot;)]" DisplayName="If - SPBinder_IndexAndReviewTree is successfully run?" sap:VirtualizedContainerService.HintSize="673.6,1826.4" sap2010:WorkflowViewState.IdRef="If_1">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -182,13 +182,13 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
       <If.Then>
-        <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="595.2,1033.6" sap2010:WorkflowViewState.IdRef="Sequence_24">
+        <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="640,1412" sap2010:WorkflowViewState.IdRef="Sequence_24">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <TryCatch DisplayName="Try Catch - SPBinder_IndexAndReviewTree" sap:VirtualizedContainerService.HintSize="532.8,944.8" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+          <TryCatch DisplayName="Try Catch - SPBinder_IndexAndReviewTree" sap:VirtualizedContainerService.HintSize="577.6,1323.2" sap2010:WorkflowViewState.IdRef="TryCatch_1">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -196,7 +196,7 @@
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
             <TryCatch.Try>
-              <Sequence DisplayName="Try Body - SPBinder_IndexAndReviewTree" sap:VirtualizedContainerService.HintSize="540.8,1120.8" sap2010:WorkflowViewState.IdRef="Sequence_21">
+              <Sequence DisplayName="Try Body - SPBinder_IndexAndReviewTree" sap:VirtualizedContainerService.HintSize="540.8,1068.8" sap2010:WorkflowViewState.IdRef="Sequence_21">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -293,7 +293,7 @@
                   </sap:WorkflowViewStateService.ViewState>
                 </ui:MultipleAssign>
                 <ui:WriteRange StartingCell="{x:Null}" WorkbookPathResource="{x:Null}" AddHeaders="True" DataTable="[in_dtInputData]" DisplayName="Write Range Workbook" sap:VirtualizedContainerService.HintSize="478.4,148" sap2010:WorkflowViewState.IdRef="WriteRange_1" SheetName="[in_Config(&quot;SanityTest_InputFileSheetName&quot;).ToString]" WorkbookPath="[in_Config(&quot;SanityTest_InputFilePath&quot;).ToString]" />
-                <ui:SetTransactionProgress TimeoutMS="{x:Null}" DisplayName="Set Transaction Progress - Wizards" FolderPath="[in_Config(&quot;OrchestratorQueueFolder&quot;).ToString]" sap:VirtualizedContainerService.HintSize="478.4,217.6" sap2010:WorkflowViewState.IdRef="SetTransactionProgress_1" Progress="[out_strProcessName+&quot; Success&quot;]" TransactionItem="[in_TransactionItem]" />
+                <ui:SetTransactionProgress TimeoutMS="{x:Null}" DisplayName="Set Transaction Progress - Wizards" FolderPath="[in_Config(&quot;OrchestratorQueueFolder&quot;).ToString]" sap:VirtualizedContainerService.HintSize="478.4,165.6" sap2010:WorkflowViewState.IdRef="SetTransactionProgress_1" Progress="[out_strProcessName+&quot; Success&quot;]" TransactionItem="[in_TransactionItem]" />
               </Sequence>
             </TryCatch.Try>
             <TryCatch.Catches>
